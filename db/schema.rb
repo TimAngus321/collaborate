@@ -77,3 +77,4 @@ ActiveRecord::Schema.define(version: 2019_05_28_141757) do
   add_foreign_key "user_instruments", "instruments"
   add_foreign_key "user_instruments", "users"
 end
+

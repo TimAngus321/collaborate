@@ -8,3 +8,4 @@ class User < ApplicationRecord
   has_many :instruments, through: :user_instruments
   has_many :requests, through: :tracks
 end
+

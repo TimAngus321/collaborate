@@ -7,7 +7,7 @@ class TracksController < ApplicationController
     @track = Track.new(track_params)
     @track.user = current_user
     if @track.save
-      redirect_to requests_path
+      redirect_to new_track_request_path(@track)
     else
       render :new
     end

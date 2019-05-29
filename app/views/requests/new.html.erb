@@ -1,0 +1,20 @@
+<h1>Congrats M8 you've Posted <%= @track.name %> Create a request</h1>
+
+<div class="container">
+  <div class="title">
+    <h1>Add A Request</h1>
+  </div>
+
+  <div class="tracks-form">
+    <%= simple_form_for ([@track, @request]) do |r| %>
+      <%= r.input :start_second %>
+      <%= r.input :end_second %>
+      <%= r.input :description %>
+      <%= r.collection_select :instrument_id, Instrument.all, :id, :name %>
+      <%= r.submit "Add a Collab Request", class: "btn btn-primary"%>
+    <% end %>
+  </div>
+  <div>
+
+  </div>
+</div>

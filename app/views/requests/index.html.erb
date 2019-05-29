@@ -3,9 +3,10 @@
     <h1>All Collaboration Track Requests: </h1>
       <div class="row">
         <% @requests.each do |request| %>
+            <%= render 'shared/track', track: request.track %>
 
-        <% end %>
 
       </div>
+        <% end %>
   </div>
 </div>

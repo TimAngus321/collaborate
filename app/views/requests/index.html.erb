@@ -1,10 +1,8 @@
 <div class="container">
   <h1>All Collaboration Track Requests: </h1>
-  <div class="row">
   <% @requests.each do |request| %>
     <%= link_to request_path(request) do %>
       <%= render 'shared/track', track: request.track %>
     <% end %>
   <% end %>
-  </div>
 </div>

@@ -4,7 +4,7 @@ class RequestsController < ApplicationController
   end
 
   def show
-    @requests = Request.find(params[:id])
+    @request = Request.find(params[:id])
   end
 
 end

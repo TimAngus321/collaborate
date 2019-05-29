@@ -1,0 +1,13 @@
+<div class="container">
+  <h1>Collaborate with <%= @request.track.user.username %></h1>
+
+  <p><%= @request.description %></p>
+
+  <%= render 'shared/track', track: @request.track %>
+
+
+  <%= link_to "Return to Tracks Timeline", requests_path, class: "btn btn-primary" %>
+
+  <%= link_to "Placeholder for Download", request_path, class: "btn btn-danger" %>
+
+</div>

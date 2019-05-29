@@ -5,11 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
-User.destroy_all
-Track.destroy_all
-Instrument.destroy_all
 Request.destroy_all
+Track.destroy_all
+UserInstrument.destroy_all
+User.destroy_all
+Instrument.destroy_all
+
 UserInstrument.destroy_all
 
 puts 'Creating Instruments!'
@@ -215,19 +216,6 @@ User.create!(
   )
 
 puts "#{User.count} Users created"
-puts 'Creating Tracks'
-
-Track.create!(
-  user: User.find_by(username: 'Ludwig_van_Beathoven'),
-  name: 'Symphony No. 69',
-  bpm: 75,
-  time_signature: '6/12',
-  key: 'Abm7',
-  duration: 1200,
-  file_url: ''
-  )
-
-puts "#{Track.count} Tracks created"
 puts 'Creating User Instruments'
 
 UserInstrument.create!(
@@ -257,7 +245,7 @@ UserInstrument.create!(
 
 UserInstrument.create!(
   user: User.find_by(username: 'MusicalMastermind'),
-  instrument: Instrument.find_by(name: 'Piano')
+  instrument: Instrument.find_by(name: 'Violin')
   )
 
 UserInstrument.create!(
@@ -270,7 +258,123 @@ UserInstrument.create!(
   instrument: Instrument.find_by(name: 'Piano')
   )
 
+puts "#{UserInstrument.count} User Instruments created"
+puts 'Creating Tracks'
 
+Track.create!(
+  user: User.find_by(username: 'Ludwig_van_Beathoven'),
+  name: 'Symphony No. 10',
+  bpm: 75,
+  time_signature: '6/12',
+  key: 'Abm7',
+  duration: 1200,
+  file_url: ''
+  )
 
+Track.create!(
+  user: User.find_by(username: 'Mr_Traumatic'),
+  name: 'the silence of sound',
+  bpm: 100,
+  time_signature: '4/4',
+  key: 'Gmj',
+  duration: 240,
+  file_url: ''
+  )
 
+Track.create!(
+  user: User.find_by(username: 'BerndtDasBrot'),
+  name: 'Whole Grain',
+  bpm: 90,
+  time_signature: '4/4',
+  key: 'Am',
+  duration: 200,
+  file_url: ''
+  )
 
+Track.create!(
+  user: User.find_by(username: 'Tovarish_Tunes'),
+  name: 'Our Song',
+  bpm: 110,
+  time_signature: '3/4',
+  key: 'Fmj7',
+  duration: 300,
+  file_url: ''
+  )
+
+Track.create!(
+  user: User.find_by(username: 'LinkedIn_Park'),
+  name: 'Number',
+  bpm: 125,
+  time_signature: '4/4',
+  key: 'Cmj',
+  duration: 236,
+  file_url: ''
+  )
+
+Track.create!(
+  user: User.find_by(username: 'MusicalMastermind'),
+  name: 'Violin Concerto 4. Op. 57',
+  bpm: 99,
+  time_signature: '6/6',
+  key: 'Fbm5',
+  duration: 1674,
+  file_url: ''
+  )
+
+Track.create!(
+  user: User.find_by(username: 'BubbsBunny'),
+  name: 'Looony Tunes',
+  bpm: 375,
+  time_signature: '2/2',
+  key: 'Cmj',
+  duration: 187,
+  file_url: ''
+  )
+
+Track.create!(
+  user: User.find_by(username: 'xxx_DatBoi420_xxx'),
+  name: 'my first song',
+  bpm: 100,
+  time_signature: '2/2',
+  key: 'Fmj',
+  duration: 200,
+  file_url: ''
+  )
+
+puts "#{Track.count} Tracks created"
+puts "Creating Requests"
+
+Request.create!(
+  track: Track.find_by(name: 'my first song'),
+  instrument: Instrument.find_by(name: 'Bass Guitar'),
+  start_second: 25,
+  end_second: 100,
+  description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem non autem est necessitatibus aspernatur totam cumque temporibus incidunt, modi esse ab maxime itaque, tempora voluptate molestias. Iure beatae incidunt at."
+  )
+
+Request.create!(
+  track: Track.find_by(name: 'Number'),
+  instrument: Instrument.find_by(name: 'Violin'),
+  start_second: 5,
+  end_second: 18,
+  description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem non autem est necessitatibus aspernatur totam cumque temporibus incidunt, modi esse ab maxime itaque, tempora voluptate molestias. Iure beatae incidunt at."
+  )
+
+Request.create!(
+  track: Track.find_by(name: 'Our Song'),
+  instrument: Instrument.find_by(name: 'Trumpet'),
+  start_second: 110,
+  end_second: 157,
+  description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem non autem est necessitatibus aspernatur totam cumque temporibus incidunt, modi esse ab maxime itaque, tempora voluptate molestias. Iure beatae incidunt at."
+  )
+
+Request.create!(
+  track: Track.find_by(name: 'Symphony No. 10'),
+  instrument: Instrument.find_by(name: 'Piano'),
+  start_second: 382,
+  end_second: 555,
+  description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem non autem est necessitatibus aspernatur totam cumque temporibus incidunt, modi esse ab maxime itaque, tempora voluptate molestias. Iure beatae incidunt at."
+  )
+
+puts "#{Request.count} Requests created"
+puts "SEEDED!"

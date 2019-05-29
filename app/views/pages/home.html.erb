@@ -4,7 +4,9 @@
   <div class="container">
     <h1>Want to <strong>finish</strong> that <strong>track today</strong>?</h1>
     <p>Collaborate connects you to artists globally with the talent <strong>you</strong> need to realise your ideal sound.</p>
-    <a class="btn btn-light" href="#">Sign in/Sign up</a>
+    <% if !user_signed_in? %>
+      <%= link_to "Join now", new_user_registration_path, class: "btn btn-light" %>
+    <% end %>
   </div>
 </div>
 

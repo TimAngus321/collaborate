@@ -12,10 +12,16 @@ class UsersController < ApplicationController
 
     instruments = Instrument.where(id: params[:user][:instruments])
     @user.instruments = instruments
+
+
     if @user.save
-      redirect_to edit_user_path
+      redirect_to root_path
     else
-      render "users/edit_user"
+      render :edit
     end
   end
+
+  # def user_params
+  #   params.require
+  # end
 end

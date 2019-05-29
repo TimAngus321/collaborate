@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-4 col-sm-offset-4">
+
+    <%= simple_form_for @user do |f| %>
+      <%= f.input :username %>
+      <%= f.input :first_name %>
+      <%= f.input :last_name %>
+      <%= f.input :biography %>
+      <%= f.input :instruments, as: :select, collection: Instrument.all, input_html: { multiple: true } %>
+      <%= f.submit "save" %>
+    <% end %>
+
+    </div>
+  </div>
+</div>
+

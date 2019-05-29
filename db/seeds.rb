@@ -348,28 +348,32 @@ Request.create!(
   track: Track.find_by(name: 'my first song'),
   instrument: Instrument.find_by(name: 'Bass Guitar'),
   start_second: 25,
-  end_second: 100
+  end_second: 100,
+  description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem non autem est necessitatibus aspernatur totam cumque temporibus incidunt, modi esse ab maxime itaque, tempora voluptate molestias. Iure beatae incidunt at."
   )
 
 Request.create!(
   track: Track.find_by(name: 'Number'),
   instrument: Instrument.find_by(name: 'Violin'),
   start_second: 5,
-  end_second: 18
+  end_second: 18,
+  description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem non autem est necessitatibus aspernatur totam cumque temporibus incidunt, modi esse ab maxime itaque, tempora voluptate molestias. Iure beatae incidunt at."
   )
 
 Request.create!(
   track: Track.find_by(name: 'Our Song'),
   instrument: Instrument.find_by(name: 'Trumpet'),
   start_second: 110,
-  end_second: 157
+  end_second: 157,
+  description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem non autem est necessitatibus aspernatur totam cumque temporibus incidunt, modi esse ab maxime itaque, tempora voluptate molestias. Iure beatae incidunt at."
   )
 
 Request.create!(
   track: Track.find_by(name: 'Symphony No. 10'),
   instrument: Instrument.find_by(name: 'Piano'),
   start_second: 382,
-  end_second: 555
+  end_second: 555,
+  description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem non autem est necessitatibus aspernatur totam cumque temporibus incidunt, modi esse ab maxime itaque, tempora voluptate molestias. Iure beatae incidunt at."
   )
 
 puts "#{Request.count} Requests created"

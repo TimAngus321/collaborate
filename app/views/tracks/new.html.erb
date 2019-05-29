@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="title">
+    <h1>Add A track</h1>
+  </div>
+
+  <div class="tracks-form">
+    <%= simple_form_for ([@track]) do |t| %>
+      <%= t.input :name %>
+      <%= t.input :bpm %>
+      <%= t.input :time_signature %>
+      <%= t.input :key %>
+      <%= t.input :duration %>
+      <%= t.submit "Add a New Track", class: "btn btn-primary"%>
+    <% end %>
+  </div>
+  <div>
+    <%= link_to "back to Track Timeline", requests_path, class: "btn btn-light"  %>
+  </div>
+</div>

@@ -13,7 +13,6 @@ class UsersController < ApplicationController
     instruments = Instrument.where(id: params[:user][:instruments])
     @user.instruments = instruments
 
-
     if @user.save
       redirect_to root_path
     else
@@ -21,7 +20,7 @@ class UsersController < ApplicationController
     end
   end
 
-  # def user_params
-  #   params.require
-  # end
+  def user_params
+    params.require(:users).permit(:username, :first_name, :last_name, :biography, :instruments)
+  end
 end

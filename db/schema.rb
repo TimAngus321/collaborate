@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 2019_05_28_141757) do
     t.integer "end_second"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "description"
     t.index ["instrument_id"], name: "index_requests_on_instrument_id"
     t.index ["track_id"], name: "index_requests_on_track_id"
   end

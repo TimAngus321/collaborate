@@ -1,26 +1,34 @@
 class UsersController < ApplicationController
-  # def index
-  #   @users = User.all
-  # end
+  def index
+    @users = User.all
+  end
+
+  def show
+    @user = User.find(params[:id])
+  end
 
   def edit
-    @user = current_user
+    @user = User.find(params[:id])
   end
 
   def update
-    @user = current_user
+    @user = User.find(params[:id])
 
     instruments = Instrument.where(id: params[:user][:instruments])
     @user.instruments = instruments
+    genres = Genre.where(id: params[:user][:genres])
+    @user.genres = genres
 
-    if @user.save
-      redirect_to root_path
+    if @user.update(user_params)
+      redirect_to user_path
     else
       render :edit
     end
   end
 
+  private
+
   def user_params
-    params.require(:users).permit(:username, :first_name, :last_name, :biography, :instruments)
+    params.require(:user).permit(:username, :first_name, :last_name, :biography, :instruments, :genres)
   end
 end

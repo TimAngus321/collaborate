@@ -10,10 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_30_152931) do
+
+
+ActiveRecord::Schema.define(version: 2019_05_30_160225) do
+
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "genres", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "instruments", force: :cascade do |t|
     t.string "name"
@@ -57,10 +66,20 @@ ActiveRecord::Schema.define(version: 2019_05_30_152931) do
     t.string "time_signature"
     t.string "key"
     t.integer "duration"
-    t.string "file_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "file"
+    t.string "genre"
     t.index ["user_id"], name: "index_tracks_on_user_id"
+  end
+
+  create_table "user_genres", force: :cascade do |t|
+    t.bigint "genre_id"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["genre_id"], name: "index_user_genres_on_genre_id"
+    t.index ["user_id"], name: "index_user_genres_on_user_id"
   end
 
   create_table "user_instruments", force: :cascade do |t|
@@ -94,6 +113,8 @@ ActiveRecord::Schema.define(version: 2019_05_30_152931) do
   add_foreign_key "submissions", "requests"
   add_foreign_key "submissions", "users"
   add_foreign_key "tracks", "users"
+  add_foreign_key "user_genres", "genres"
+  add_foreign_key "user_genres", "users"
   add_foreign_key "user_instruments", "instruments"
   add_foreign_key "user_instruments", "users"
 end

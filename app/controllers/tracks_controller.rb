@@ -13,9 +13,14 @@ class TracksController < ApplicationController
     end
   end
 
+  def destroy
+    @track = Track.find(params[:id])
+    @track.desroy
+  end
+
   private
 
   def track_params
-    params.require(:track).permit(:name, :bpm, :time_signature, :key, :duration)
+    params.require(:track).permit(:name, :bpm, :time_signature, :key, :duration, :file)
   end
 end

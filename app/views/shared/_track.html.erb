@@ -3,8 +3,10 @@
     <%= track.user.username %>
     <%= track.name %>
   </div>
-    <div class="wav">
-    <span>Input wav here</span><%= track.file_url %>
+  <div class="wav">
+    <audio controls id="audio_file" class="audio_player" preload="auto">
+      <source src="<%= track.file %>" type="audio/wav">
+    </audio>
   </div>
   <div class="wav-details">
     <%= track.duration %>
@@ -13,3 +15,4 @@
     <%= track.key %>
   </div>
 </div>
+

@@ -1,0 +1,15 @@
+<div class="track-card-hull">
+  <div class="header">
+    <%= submission.user.username %>
+    <%= submission.name %>
+  </div>
+    <div class="wav">
+    <span>Input wav here</span><%= submission.file %>
+  </div>
+  <div class="wav-details">
+    <%= submission.duration %>
+    <%= submission.bpm %>
+    <%= submission.time_signature %>
+    <%= submission.key %>
+  </div>
+</div>

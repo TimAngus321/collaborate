@@ -5,6 +5,9 @@ class RequestsController < ApplicationController
 
   def show
     @request = Request.find(params[:id])
+    @submission = Submission.new
+    # @submission.submission_card = Submission.find(params[:request_id])
+    # @submission.instrument = Instrument.find(params[:submission][:instrument_id])
   end
 
   def new
@@ -27,5 +30,9 @@ class RequestsController < ApplicationController
 
   def request_params
     params.require(:request).permit(:start_second, :end_second, :description, :instrument_id)
+  end
+
+  def submission_params
+    params.require(:submission).permit()
   end
 end

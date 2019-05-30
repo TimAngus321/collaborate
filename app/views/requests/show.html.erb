@@ -10,4 +10,29 @@
 
   <%= link_to "Placeholder for Download", request_path, class: "btn btn-danger" %>
 
+
+
+<h1>Post a track to collaborate with <%= @request.track.user.username %></h1>
+
+<div class="tracks-form">
+    <%= simple_form_for ([@request, @submission]) do |s| %>
+      <%= s.input :description %>
+      <!-- TODO Add file input here -->
+      <%= s.input :name %>
+      <%= s.input :bpm %>
+      <%= s.input :time_signature %>
+      <%= s.input :key %>
+      <%= s.input :duration %>
+      <%= s.submit "Collaborate", class: "btn btn-primary"%>
+    <% end %>
+  </div>
+
+<div>
+  <h2>Already submitted:</h2>
+  <% @request.submissions.each do |submission|  %>
+    <%= render 'shared/submission_card', submission: submission %>
+
+  <% end %>
+
+</div>
 </div>

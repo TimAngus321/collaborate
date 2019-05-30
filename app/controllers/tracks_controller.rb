@@ -21,6 +21,6 @@ class TracksController < ApplicationController
   private
 
   def track_params
-    params.require(:track).permit(:name, :bpm, :time_signature, :key, :duration)
+    params.require(:track).permit(:name, :bpm, :time_signature, :key, :duration, :file)
   end
 end

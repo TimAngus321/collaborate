@@ -1,8 +1,7 @@
 <div class="container">
   <h1>My Collaboration Track Requests: </h1>
-  <% @requests.each do |request| %>
-    <%= link_to request_path(request) do %>
-      <%= render 'shared/track', track: request.track %>
+  <% current_user.submissions.each do |submission| %>
+  <%= submission%>
     <% end %>
   <% end %>
 </div>

@@ -8,7 +8,7 @@
       <%= f.input :last_name %>
       <%= f.input :biography %>
       <%= f.input :instruments, as: :select, collection: Instrument.all, input_html: { multiple: true } %>
-      <%= f.submit "save" %>
+      <%= f.submit "Save", class: "btn btn-primary" %>
     <% end %>
 
     </div>

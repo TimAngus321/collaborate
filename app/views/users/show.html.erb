@@ -11,6 +11,7 @@
     <p> Genres: <% @user.genres.each do |genre| %>
     <%= genre.name %>
     <% end %></p>
+    <%= link_to 'Edit my profile', edit_user_path(current_user) %>
 </div>
 
 

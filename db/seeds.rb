@@ -8,11 +8,47 @@
 Request.destroy_all
 Track.destroy_all
 UserInstrument.destroy_all
-User.destroy_all
 Instrument.destroy_all
+UserGenre.destroy_all
+Genre.destroy_all
+User.destroy_all
 
-UserInstrument.destroy_all
 
+puts 'Creating genres!'
+
+Genre.create!(
+  name: 'Rock'
+  )
+
+Genre.create!(
+  name: 'Pop'
+  )
+
+Genre.create!(
+  name: 'Blues'
+  )
+
+Genre.create!(
+  name: 'Dance'
+  )
+
+Genre.create!(
+  name: 'Techno'
+  )
+
+Genre.create!(
+  name: 'Country and Western'
+  )
+
+Genre.create!(
+  name: 'Bluegrass'
+  )
+
+Genre.create!(
+  name: 'Michael Wong Style'
+  )
+
+puts "#{Genre.count} Genres created"
 puts 'Creating Instruments!'
 
 Instrument.create!(

@@ -136,7 +136,7 @@ puts "#{Instrument.count} Instruments created"
 puts 'Creating Users'
 
 User.create!(
-  username: 'xxx_DatBoi420_xxx',
+  username: 'xxx_DatBoi4$0_xxx',
   email: 'geoff.butler@example.com',
   password: '123456',
   first_name: 'Geoff',
@@ -254,7 +254,7 @@ UserInstrument.create!(
   )
 
 UserInstrument.create!(
-  user: User.find_by(username: 'xxx_DatBoi420_xxx'),
+  user: User.find_by(username: 'xxx_DatBoi4$0_xxx'),
   instrument: Instrument.find_by(name: 'Piano')
   )
 
@@ -268,7 +268,7 @@ Track.create!(
   time_signature: '6/12',
   key: 'Abm7',
   duration: 1200,
-  file_url: ''
+  remote_file_url: 'https://res.cloudinary.com/beartechnologies/video/upload/v1559223793/Richard_Wagner_-_Ride_Of_The_Valkyries-GGU1P6lBW6Q_weclof.wav'
   )
 
 Track.create!(
@@ -278,7 +278,7 @@ Track.create!(
   time_signature: '4/4',
   key: 'Gmj',
   duration: 240,
-  file_url: ''
+  remote_file_url: 'https://res.cloudinary.com/beartechnologies/video/upload/v1559225198/Oliver_Heldens_-_Gecko_Original_Mix-jjx2oc2NRzA_ti3ja2.wav'
   )
 
 Track.create!(
@@ -288,7 +288,7 @@ Track.create!(
   time_signature: '4/4',
   key: 'Am',
   duration: 200,
-  file_url: ''
+  remote_file_url: 'https://res.cloudinary.com/beartechnologies/video/upload/v1559225340/perry_como_papa_loves_mambo-ujB-BZn3C4g_hz34jz.wav'
   )
 
 Track.create!(
@@ -298,7 +298,7 @@ Track.create!(
   time_signature: '3/4',
   key: 'Fmj7',
   duration: 300,
-  file_url: ''
+  remote_file_url: 'https://res.cloudinary.com/beartechnologies/video/upload/v1559225504/The_Red_Army_Choir_Sacred_War.-1KE_Sip9woI_xwjfd2.wav'
   )
 
 Track.create!(
@@ -308,7 +308,7 @@ Track.create!(
   time_signature: '4/4',
   key: 'Cmj',
   duration: 236,
-  file_url: ''
+  remote_file_url: 'https://res.cloudinary.com/beartechnologies/video/upload/v1559225838/Falco_-_Der_Kommissar_Official_Video-8-bgiiTxhzM_kigsqa.wav'
   )
 
 Track.create!(
@@ -318,7 +318,7 @@ Track.create!(
   time_signature: '6/6',
   key: 'Fbm5',
   duration: 1674,
-  file_url: ''
+  remote_file_url: 'https://res.cloudinary.com/beartechnologies/video/upload/v1559225617/Queen_-_Bohemian_Rhapsody_Official_Video-fJ9rUzIMcZQ_s0gxao.wav'
   )
 
 Track.create!(
@@ -328,17 +328,17 @@ Track.create!(
   time_signature: '2/2',
   key: 'Cmj',
   duration: 187,
-  file_url: ''
+  remote_file_url: 'https://res.cloudinary.com/beartechnologies/video/upload/v1559225960/Bugs_Bunny_Theme-fWkdCsruXV0_hjstwm.wav'
   )
 
 Track.create!(
-  user: User.find_by(username: 'xxx_DatBoi420_xxx'),
+  user: User.find_by(username: 'xxx_DatBoi4$0_xxx'),
   name: 'my first song',
   bpm: 100,
   time_signature: '2/2',
   key: 'Fmj',
   duration: 200,
-  file_url: ''
+  remote_file_url: 'https://res.cloudinary.com/beartechnologies/video/upload/v1559226084/Charles_Mingus_-_Moanin-__OSyznVDOY_wirx3d.wav'
   )
 
 puts "#{Track.count} Tracks created"
@@ -349,7 +349,7 @@ Request.create!(
   instrument: Instrument.find_by(name: 'Bass Guitar'),
   start_second: 25,
   end_second: 100,
-  description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem non autem est necessitatibus aspernatur totam cumque temporibus incidunt, modi esse ab maxime itaque, tempora voluptate molestias. Iure beatae incidunt at."
+  description: "Smooth as butter. Saxophone and imporv as it was meant to be! However, It's missing something, A Clarinet to accompany the Sax!"
   )
 
 Request.create!(
@@ -357,7 +357,7 @@ Request.create!(
   instrument: Instrument.find_by(name: 'Violin'),
   start_second: 5,
   end_second: 18,
-  description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem non autem est necessitatibus aspernatur totam cumque temporibus incidunt, modi esse ab maxime itaque, tempora voluptate molestias. Iure beatae incidunt at."
+  description: "Would love a piano riff after the refrain! something to add to the 80s drum machine!"
   )
 
 Request.create!(
@@ -365,7 +365,7 @@ Request.create!(
   instrument: Instrument.find_by(name: 'Trumpet'),
   start_second: 110,
   end_second: 157,
-  description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem non autem est necessitatibus aspernatur totam cumque temporibus incidunt, modi esse ab maxime itaque, tempora voluptate molestias. Iure beatae incidunt at."
+  description: "Some French horns High above the ringing trombones on the bridge."
   )
 
 Request.create!(
@@ -373,7 +373,39 @@ Request.create!(
   instrument: Instrument.find_by(name: 'Piano'),
   start_second: 382,
   end_second: 555,
-  description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem non autem est necessitatibus aspernatur totam cumque temporibus incidunt, modi esse ab maxime itaque, tempora voluptate molestias. Iure beatae incidunt at."
+  description: "Already kinda perfect, perhaps some sublte violin Arpeggios above the first few"
+  )
+
+Request.create!(
+  track: Track.find_by(name: 'Looony Tunes'),
+  instrument: Instrument.find_by(name: 'Piano'),
+  start_second: 12,
+  end_second: 27,
+  description: "A THICCC trap beat plz. with bouncing high hats and more!"
+  )
+
+Request.create!(
+  track: Track.find_by(name: 'Violin Concerto 4. Op. 57'),
+  instrument: Instrument.find_by(name: 'Violin'),
+  start_second: 193,
+  end_second: 222,
+  description: "Just more of the same thing really... :("
+  )
+
+Request.create!(
+  track: Track.find_by(name: 'Whole Grain'),
+  instrument: Instrument.find_by(name: 'Trumpet'),
+  start_second: 22,
+  end_second: 42,
+  description: "A Sick Beat on the Marimas, please."
+  )
+
+Request.create!(
+  track: Track.find_by(name: 'the silence of sound'),
+  instrument: Instrument.find_by(name: 'Oboe'),
+  start_second: 0,
+  end_second: 200,
+  description: "Some Vocals."
   )
 
 puts "#{Request.count} Requests created"

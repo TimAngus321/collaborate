@@ -13,6 +13,11 @@ class TracksController < ApplicationController
     end
   end
 
+  def destroy
+    @track = Track.find(params[:id])
+    @track.desroy
+  end
+
   private
 
   def track_params

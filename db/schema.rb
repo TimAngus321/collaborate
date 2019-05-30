@@ -11,6 +11,7 @@
 # It's strongly recommended that you check this file into your version control system.
 
 
+
 ActiveRecord::Schema.define(version: 2019_05_30_160225) do
 
 
@@ -39,6 +40,23 @@ ActiveRecord::Schema.define(version: 2019_05_30_160225) do
     t.text "description"
     t.index ["instrument_id"], name: "index_requests_on_instrument_id"
     t.index ["track_id"], name: "index_requests_on_track_id"
+  end
+
+  create_table "submissions", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "request_id"
+    t.text "description"
+    t.boolean "selected"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "name"
+    t.string "file"
+    t.integer "bpm"
+    t.string "time_signature"
+    t.string "key"
+    t.integer "duration"
+    t.index ["request_id"], name: "index_submissions_on_request_id"
+    t.index ["user_id"], name: "index_submissions_on_user_id"
   end
 
   create_table "tracks", force: :cascade do |t|
@@ -92,6 +110,8 @@ ActiveRecord::Schema.define(version: 2019_05_30_160225) do
 
   add_foreign_key "requests", "instruments"
   add_foreign_key "requests", "tracks"
+  add_foreign_key "submissions", "requests"
+  add_foreign_key "submissions", "users"
   add_foreign_key "tracks", "users"
   add_foreign_key "user_genres", "genres"
   add_foreign_key "user_genres", "users"

@@ -4,7 +4,9 @@
     <%= submission.name %>
   </div>
     <div class="wav">
-    <span>Input wav here</span><%= submission.file %>
+    <audio controls id="audio_file" class="audio_player" preload="auto">
+      <source src="<%= submission.file %>" type="audio/wav">
+    </audio>
   </div>
   <div class="wav-details">
     <%= submission.duration %>

@@ -1,7 +1,7 @@
 <div class="container">
   <h1>My Collaboration Track Requests: </h1>
   <% current_user.submissions.each do |submission| %>
-  <%= submission%>
+  <%= current_user.submission%>
     <% end %>
   <% end %>
 </div>

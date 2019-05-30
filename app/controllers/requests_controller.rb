@@ -17,7 +17,7 @@ class RequestsController < ApplicationController
     @request.track = Track.find(params[:track_id])
     @request.instrument = Instrument.find(params[:request][:instrument_id])
     if @request.save
-      redirect_to track_requests_path(@request.track)
+      redirect_to requests_path
     else
       render :new
     end

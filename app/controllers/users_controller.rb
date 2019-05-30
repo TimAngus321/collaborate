@@ -16,6 +16,8 @@ class UsersController < ApplicationController
 
     instruments = Instrument.where(id: params[:user][:instruments])
     @user.instruments = instruments
+    genres = Genre.where(id: params[:user][:genres])
+    @user.genres = genres
 
     if @user.update(user_params)
       redirect_to user_path
@@ -27,6 +29,6 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:username, :first_name, :last_name, :biography, :instruments)
+    params.require(:user).permit(:username, :first_name, :last_name, :biography, :instruments, :genres)
   end
 end

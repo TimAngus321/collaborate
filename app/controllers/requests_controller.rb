@@ -33,6 +33,6 @@ class RequestsController < ApplicationController
   end
 
   def submission_params
-    params.require(:submission).permit()
+    params.require(:submission).permit(:description, :name, :selected, :bpm, :time_signature, :key, :file)
   end
 end

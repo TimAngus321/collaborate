@@ -17,12 +17,12 @@
 <div class="tracks-form">
     <%= simple_form_for ([@request, @submission]) do |s| %>
       <%= s.input :description %>
-      <!-- TODO Add file input here -->
       <%= s.input :name %>
       <%= s.input :bpm %>
       <%= s.input :time_signature %>
       <%= s.input :key %>
       <%= s.input :duration %>
+      <%= s.input :file %>
       <%= s.submit "Collaborate", class: "btn btn-primary"%>
     <% end %>
   </div>

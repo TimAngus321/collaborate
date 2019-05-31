@@ -11,6 +11,10 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
+  def my_final_tracks
+    @final_tracks = current_user.tracks
+  end
+
   def update
     @user = User.find(params[:id])
 

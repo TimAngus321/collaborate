@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
   devise_for :users, controllers: { registrations: "registrations" }
   root to: 'pages#home'
+  get '/my_final_tracks', to: 'users#my_final_tracks'
 
 
-  resources :users, only: [:edit, :update, :show]
+  resources :users, only: [:edit, :update, :show, :index]
+
   resources :tracks, only: [:new, :create] do
     resources :requests, only: [:new, :create]
   end

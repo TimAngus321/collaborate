@@ -20,8 +20,8 @@
           <%= image_tag "https://res.cloudinary.com/beartechnologies/image/upload/v1559291556/collaborate/46262498_ddv3fy.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
             <%= link_to "Profile", user_path(current_user), class: "dropdown-item" %>
-            <%= link_to "My Requests", "#", class: "dropdown-item" %>
-            <%= link_to "My Sumbissions", "#", class: "dropdown-item" %>
+            <%= link_to "My Requests", my_requests_path, class: "dropdown-item" %>
+            <%= link_to "My Sumbissions", my_submissions_path, class: "dropdown-item" %>
             <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
           </div>
         </li>

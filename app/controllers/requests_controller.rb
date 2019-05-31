@@ -21,6 +21,7 @@ class RequestsController < ApplicationController
 
   def create
     @request = Request.new(request_params)
+    @track = Track.find(params[:track_id])
     @request.track = Track.find(params[:track_id])
     @request.instrument = Instrument.find(params[:request][:instrument_id])
     if @request.save

@@ -3,11 +3,7 @@
     <%= track.user.username %>
     <%= track.name %>
   </div>
-  <div class="wav">
-    <audio controls id="audio_file" class="audio_player" preload="auto">
-      <source src="<%= track.file %>" type="audio/wav">
-    </audio>
-  </div>
+  <div id="track_<%= track.id %>" class="waveform" data-track-url='<%= track.file %>'></div>
   <div class="wav-details">
     <%= track.duration %>
     <%= track.bpm %>
@@ -15,4 +11,3 @@
     <%= track.key %>
   </div>
 </div>
-

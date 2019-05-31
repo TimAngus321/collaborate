@@ -3,7 +3,8 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
 
-  resources :users, only: [:edit, :update, :show]
+  resources :users, only: [:edit, :update, :show, :index]
+  get "final_tracks/:id", to: "my_final_tracks#final_tracks"
   resources :tracks, only: [:new, :create] do
     resources :requests, only: [:new, :create]
   end

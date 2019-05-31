@@ -22,6 +22,7 @@
             <%= link_to "Profile", user_path(current_user), class: "dropdown-item" %>
             <%= link_to "My Requests", "#", class: "dropdown-item" %>
             <%= link_to "My Sumbissions", "#", class: "dropdown-item" %>
+            <%= link_to "My Final Tracks", my_final_tracks_path, class: "dropdown-item" %>
             <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
           </div>
         </li>

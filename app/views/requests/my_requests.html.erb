@@ -1,7 +1,9 @@
 <div class="container">
   <h1>My Collaboration Track Requests: </h1>
-  <% current_user.submissions.each do |submission| %>
-  <%= current_user.submission%>
-    <% end %>
+  <% @requests.each do |request| %>
+    <p>Description: <%= request.description %></p>
+    <%= render 'shared/track', track: request.track %>
+    <p>Start (seconds): <%= request.start_second %></p>
+    <p>End (seconds): <%= request.end_second %></p>
   <% end %>
 </div>

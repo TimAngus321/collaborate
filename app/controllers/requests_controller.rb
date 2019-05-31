@@ -10,6 +10,10 @@ class RequestsController < ApplicationController
     # @submission.instrument = Instrument.find(params[:submission][:instrument_id])
   end
 
+  def my_requests
+    @requests = current_user.requests
+  end
+
   def new
     @track = Track.find(params[:track_id])
     @request = Request.new

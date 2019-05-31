@@ -1,15 +1,18 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: #270F60;
+  font-family: 'Audiowide', cursive;
 }
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
+  font-family: 'Audiowide', cursive;
 }
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
   border-radius: 50%;
+  font-family: 'Audiowide', cursive;
 }
 
 .navbar-link {
@@ -17,8 +20,11 @@
   text-decoration: none;
   padding-left: 10px;
   padding-right: 20px;
+  font-family: 'Audiowide', cursive;
+
 }
 
 .navbar-link:hover {
   text-decoration: none;
+  font-family: 'Audiowide', cursive;
 }

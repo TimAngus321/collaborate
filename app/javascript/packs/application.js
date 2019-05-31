@@ -22,7 +22,11 @@ $(document).ready(function() {
     });
 
     wave.on('pause', function () {
-        wave.params.container.style.opacity = 0.9;
+      var containerId = wave.params.container;
+      var container = document.getElementById(containerId);
+      if (container) {
+        container.style.opacity = 0.9;
+      }
     });
   })
 })

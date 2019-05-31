@@ -1,0 +1,12 @@
+<div class="container">
+  <h1>My Submissions to Collaboration Requests </h1>
+  <% @submissions.each do |submission| %>
+    <p>Description: <%= submission.description %></p>
+    <%= render 'shared/submission_card', submission: submission %>
+    <p>Name: <%= submission.name %></p>
+    <p>BPM: <%= submission.bpm %></p>
+    <p>Time Signature: <%= submission.time_signature %></p>
+    <p>Key: <%= submission.key %></p>
+    <p>Duration: <%= submission.duration %></p>
+  <% end %>
+</div>

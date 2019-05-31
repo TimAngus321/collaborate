@@ -11,6 +11,10 @@ class SubmissionsController < ApplicationController
     @submission = Submission.find(params[:id])
   end
 
+  def my_submissions
+    @submissions = current_user.submissions
+  end
+
   def create
     @request = Request.find(params[:request_id])
     @submission = Submission.new(submission_params)

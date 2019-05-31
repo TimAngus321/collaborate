@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   resources :tracks, only: [:new, :create] do
     resources :requests, only: [:new, :create]
   end
+  get :my_requests, to: "requests#my_requests"
+  get :my_submissions, to: "submissions#my_submissions"
   resources :requests, only: [:show, :index, :edit, :update] do
     resources :submissions, only: [:create]
   end

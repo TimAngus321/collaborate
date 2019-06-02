@@ -1,13 +1,37 @@
 .track-card-hull {
   overflow: hidden;
-  height: 250px;
-  background: #838080;
+  height: 300px;
+  background: light-gray;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   border-radius: 5px;
   align-items: center;
   margin: 15px;
   padding: 10px;
-  color: white;
+  color: black;
   font-family: 'Work Sans', sans-serif;
 }
 
+.track-wav-details {
+  padding: 5px;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+.track-wav-details p {
+  font-size: 20px;
+  border-radius: 5px;
+  border-width: 1px;
+  border-color: black;
+  padding: 5px;
+}
+
+
+.track-card-header {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-left: 65px;
+  margin-right: 65px;
+  font-family: 'Work Sans', sans-serif;
+}

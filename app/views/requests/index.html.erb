@@ -1,6 +1,7 @@
 <div class="container">
   <div class="index-title">
     <h1>All Collaboration Track Requests </h1>
+    <h2><i class="fas fa-search"></i>Search</h2>
   </div>
 
   <div class="row justify-content-center">
@@ -14,6 +15,5 @@
       <%= link_to request_path(request) do %>
         <%= render 'shared/track', track: request.track %>
       <% end %>
-    <% end %>
   </div>
 </div>

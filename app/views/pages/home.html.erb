@@ -1,12 +1,11 @@
-
-
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80);">
   <div class="container">
     <h1>Want to <strong>finish</strong> that <strong>track today</strong>?</h1>
     <p>Collaborate connects you to artists globally with the talent <strong>you</strong> need to realise your ideal sound.</p>
     <% if !user_signed_in? %>
       <%= link_to "Join now", new_user_registration_path, class: "btn btn-light" %>
+      <% else %>
+      <%= link_to "Finish your track now!", requests_path, class: "btn btn-light" %>
     <% end %>
   </div>
 </div>
-

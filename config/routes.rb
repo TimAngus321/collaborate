@@ -11,8 +11,8 @@ Rails.application.routes.draw do
   end
   get :my_requests, to: "requests#my_requests"
   get :my_submissions, to: "submissions#my_submissions"
-  resources :requests, only: [:show, :index, :edit, :update] do
+  resources :requests, only: [:show, :index, :edit, :update, :destroy] do
     resources :submissions, only: [:create]
   end
-  resources :submissions, only: [:show, :index, :edit, :update]
+  resources :submissions, only: [:show, :index, :edit, :update, :destroy]
 end

@@ -1,14 +1,19 @@
+
 <div class="submission-card-hull">
-  <div class="header">
-    <%= submission.user.username %>
-    <%= submission.name %>
+  <div class="submission-card-header">
+    <h3><%= submission.user.username %></h3>
+    <h4><%= submission.name %></h4>
   </div>
+
+  <div class="submission-card-wav">
     <div id="track_<%= submission.id %>" class="<%= 'waveform' if submission.file %>" data-track-url='<%= submission.file.url(secure: true) %>'></div>
-  <div class="wav-details">
-    <%= submission.duration %>
-    <%= submission.bpm %>
-    <%= submission.time_signature %>
-    <%= submission.key %>
+  </div>
+
+  <div class="submission-wav-details">
+    <p><strong>Length:  </strong><%= submission.duration %>s</p>
+    <p><strong>bpm:  </strong><%= submission.bpm %></p>
+    <p><strong>Time Signature:  </strong><%= submission.time_signature %></p>
+    <p><strong>Key:  </strong><%= submission.key %></p>
   </div>
 </div>
 

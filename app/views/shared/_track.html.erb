@@ -1,14 +1,20 @@
-<div class="container"></div>
+
 <div class="track-card-hull">
-  <div class="header">
-    <%= track.user.username %>
-    <%= track.name %>
+  <div class="track-card-header">
+    <h3><%= track.user.username %></h2>
+    <h4><%= track.name %></h1>
   </div>
-  <div id="track_<%= track.id %>" class="<%= "waveform" if track.file %>" data-track-url='<%= track.file.url(secure: true) %>'></div>
-  <div class="wav-details">
-    <%= track.duration %>
-    <%= track.bpm %>
-    <%= track.time_signature %>
-    <%= track.key %>
+
+  <div class="track-card-wav">
+    <div id="track_<%= track.id %>" class="<%= "waveform" if track.file %>" data-track-url='<%= track.file.url(secure: true) %>'></div>
+  </div>
+
+  <div class="track-wav-details">
+    <p><strong>Length:  </strong><%= track.duration %>s</p>
+    <p><strong>bpm:  </strong><%= track.bpm %></p>
+    <p><strong>Time Signature:  </strong><%= track.time_signature %></p>
+    <p><strong>Key:  </strong><%= track.key %></p>
   </div>
 </div>
+
+

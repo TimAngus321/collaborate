@@ -7,6 +7,7 @@
     "bootstrap": "^4.3.1",
     "core-js": "3",
     "jquery": "^3.4.1",
+    "malihu-custom-scrollbar-plugin": "^3.1.5",
     "popper.js": "^1.15.0",
     "wavesurfer.js": "^2.2.1",
     "yarn": "^1.16.0"

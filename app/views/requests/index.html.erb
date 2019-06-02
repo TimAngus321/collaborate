@@ -1,5 +1,6 @@
 <div class="container">
   <h1>All Collaboration Track Requests </h1>
+  <h2><i class="fas fa-search"></i>Search</h2>
   <% @requests.each do |request| %>
     <%= link_to request_path(request) do %>
       <%= render 'shared/track', track: request.track %>

@@ -14,5 +14,5 @@ Rails.application.routes.draw do
   resources :requests, only: [:show, :index, :edit, :update, :destroy] do
     resources :submissions, only: [:create]
   end
-  resources :submissions, only: [:show, :index, :edit, :update]
+  resources :submissions, only: [:show, :index, :edit, :update, :destroy]
 end

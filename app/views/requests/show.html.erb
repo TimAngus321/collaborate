@@ -27,12 +27,12 @@
     <% end %>
   </div>
 
-<div>
-  <h2>Already submitted:</h2>
-  <% @request.submissions.each do |submission|  %>
-    <%= render 'shared/submission_card', submission: submission %>
+  <div>
+    <h2>Already submitted:</h2>
+    <% @request.submissions.each do |submission|  %>
+      <%= render 'shared/submission_card', submission: submission %>
 
-  <% end %>
+    <% end %>
 
-</div>
+  </div>
 </div>

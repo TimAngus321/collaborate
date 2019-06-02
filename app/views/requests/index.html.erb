@@ -14,6 +14,7 @@
     <% @requests.each do |request| %>
       <%= link_to request_path(request) do %>
         <%= render 'shared/track', track: request.track %>
-      <% end %>
+    <% end %>
+    <% end %>
   </div>
 </div>

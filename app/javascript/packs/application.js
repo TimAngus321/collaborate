@@ -7,7 +7,7 @@ $(document).ready(function() {
   tracks.forEach((track) => {
     let wave = WaveSurfer.create({
       container: `#${track.id}`,
-      waveColor: 'white',
+      waveColor: 'black',
       progressColor: '#D1D1D1',
       mediaControls: true,
       backend: 'MediaElement'

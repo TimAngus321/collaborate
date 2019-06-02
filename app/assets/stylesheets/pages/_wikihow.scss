@@ -7,11 +7,18 @@
   color: white;
 }
 
+// .banner h1 {
+//   margin: 30px;
+// }
+
 .circle-card {
   width: 300px;
   object-fit: cover;
-  border-radius: 50%;
   color: white;
+  border: 2px;
+  border-color: lightgrey;
+  background-color: rgba( 211, 211, 211, 0.3);
+  border-radius: 10px;
 }
 
 .circle-card img {
@@ -21,10 +28,37 @@
   border-radius: 50%;
   box-shadow: 1px 1px 5px lightgrey;
   color: white;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 50px;
+  position: center;
+}
+
+.wiki-heading {
+  margin: 40px;
 }
 
 .circle-cards {
   display: flex;
   justify-content: space-around;
   color: white;
+}
+
+.circle-card p {
+    margin-top: 0;
+    margin-bottom: 2rem;
+    color: white;
+    text-shadow: 1px 1px 5px lightgrey;
+}
+
+.btn-light {
+  margin: 20px;
+}
+
+.paragraph {
+  margin: 10px;
+}
+
+.info-card-title {
+  margin-left: 10px;
 }

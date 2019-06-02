@@ -1,0 +1,30 @@
+// Specific CSS for your home-page
+.banner {
+  background-size: cover;
+  background-position: center;
+  padding: 60px 0;
+  height: 100vh;
+  color: white;
+}
+
+.circle-card {
+  width: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+  color: white;
+}
+
+.circle-card img {
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 1px 1px 5px lightgrey;
+  color: white;
+}
+
+.circle-cards {
+  display: flex;
+  justify-content: space-around;
+  color: white;
+}

@@ -1,55 +1,33 @@
 import "bootstrap";
-
-
 import WaveSurfer from 'wavesurfer.js';
 
+$(document).ready(function() {
+  const tracks = document.querySelectorAll(".waveform");
 
+  tracks.forEach((track) => {
+    let wave = WaveSurfer.create({
+      container: `#${track.id}`,
+      waveColor: 'white',
+      progressColor: '#D1D1D1',
+      mediaControls: true,
+      backend: 'MediaElement'
+      // mediaType: 'audio',
+      // partialRender: true
 
+    });
+    wave.load(track.dataset.trackUrl);
+    // document.querySelectorAll(track)
+    wave.getCurrentTime({
+      container: `#${track.id}`
+    });
 
-const tracks = document.querySelectorAll(".waveform");
-
-tracks.forEach((track) => {
-  let wave = WaveSurfer.create({
-    container: `#${track.id}`,
-    waveColor: 'white',
-    progressColor: '#D1D1D1',
-    mediaControls: true,
-    backend: 'MediaElement'
-    // mediaType: 'audio',
-    // partialRender: true
-
-  });
-  wave.load(track.dataset.trackUrl);
-  // document.querySelectorAll(track)
-  wave.getCurrentTime({
-    container: `#${track.id}`
-  });
-
-  wave.on('pause', function () {
-      wave.params.container.style.opacity = 0.9;
-  });
+    wave.on('pause', function () {
+      var containerId = wave.params.container;
+      var container = document.getElementById(containerId);
+      if (container) {
+        container.style.opacity = 0.9;
+      }
+    });
+  })
 })
 
-// const sub_tracks = document.querySelectorAll(".waveform-sub");
-
-// sub_tracks.forEach((track) => {
-//   let wave = WaveSurfer.create({
-//     container: `#${track.id}`,
-//     waveColor: 'white',
-//     progressColor: '#D1D1D1',
-//     mediaControls: true,
-//     backend: 'MediaElement'
-//     // mediaType: 'audio',
-//     // partialRender: true
-
-//   });
-//   wave.load(track.dataset.trackUrl);
-//   // document.querySelectorAll(track)
-//   wave.getCurrentTime({
-//     container: `#${track.id}`
-//   });
-
-//   wave.on('pause', function () {
-//       wave.params.container.style.opacity = 0.9;
-//   });
-// })

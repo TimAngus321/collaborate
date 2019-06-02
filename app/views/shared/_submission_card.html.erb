@@ -3,7 +3,7 @@
     <%= submission.user.username %>
     <%= submission.name %>
   </div>
-    <div id="track_<%= submission.id %>" class="waveform" data-track-url='<%= submission.file %>'></div>
+    <div id="track_<%= submission.id %>" class="<%= 'waveform' if submission.file %>" data-track-url='<%= submission.file.url(secure: true) %>'></div>
   <div class="wav-details">
     <%= submission.duration %>
     <%= submission.bpm %>

@@ -4,14 +4,11 @@ class SubmissionsController < ApplicationController
   end
 
   def new
-    @request = Request.find(params[:request_id])
-    @submission = Submission.new(submission_params)
+    @submission = Submission.new
   end
 
   def show
     @submission = Submission.find(params[:id])
-    @request = Request.find(params[:request_id])
-    @track = Track.find(params[:track_id])
   end
 
   def my_submissions

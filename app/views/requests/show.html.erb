@@ -12,7 +12,8 @@
 
 
 
-<h1>Post a track to collaborate with <%= @request.track.user.username %></h1>
+<h1>Click below to collaborate with <%= @request.track.user.username %></h1>
+<%= link_to "Collaborate", new_submission_path, class: "btn btn-primary" %>
 
 
 

@@ -2,11 +2,39 @@
   <div class="container">
     <h1>Want to <strong>finish</strong> that <strong>track today</strong>?</h1>
     <p>Collaborate connects you to artists globally with the talent <strong>you</strong> need to realise your ideal sound.</p>
-    <% if !user_signed_in? %>
-      <%= link_to "Find out more", wikihow_path, class: "btn btn-light" %>
+
+    <div class="container">
+    <div class="container">
+    <h1 class="howto">How to use Collaborate</h1>
+
+      <div class="circle-cards">
+
+        <div class="circle-card">
+          <img src="https://res.cloudinary.com/beartechnologies/image/upload/v1559504565/man6_ltp5tt.png">
+          <h3 class="info-card-title">Missing a Sound?</h3>
+          <p class="paragraph">You need vocals or an instrumental element to finish a track...but you just you don't have it.</p>
+        </div>
+
+        <div class="circle-card">
+          <img src="https://res.cloudinary.com/beartechnologies/image/upload/v1559492699/man_copy_ca2avq.png" alt="Bass">
+          <h3 class="info-card-title">Search our site!</h3>
+          <p class="paragraph">Select from from 1000s of users willing to contribute the sound you need. Once you find a user with sound you need, download their contribution. </p>
+        </div>
+
+        <div class="circle-card">
+          <img src="https://res.cloudinary.com/beartechnologies/image/upload/v1559492882/man4_l2s4ob.png">
+          <h3 class="info-card-title">Done!</h3>
+          <p class="paragraph">Afterwards you can mix it into your master track in your own software!</p>
+
+        </div>
+      </div>
+      <% if !user_signed_in? %>
+      <%= link_to "Join now", new_user_registration_path, class: "btn btn-light" %>
       <% else %>
-      <%= link_to "Finish your track now!", requests_path, class: "btn btn-light" %>
+      <%= link_to "Join Collaborate", requests_path, class: "btn btn-light" %>
     <% end %>
+  </div>
+  </div>
   </div>
 </div>
 

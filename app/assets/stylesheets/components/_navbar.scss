@@ -37,6 +37,7 @@
 }
 
 
+
 #navbarDropdown {
   color: #ede8e8;
   font-size: 30px;
@@ -45,4 +46,22 @@
 #navbarDropdown:hover {
   color: #C420C8;
   transition: 0.2s;
+
+.fa-search {
+  color: white;
 }
+
+.searchbar {
+  display: inline-block;
+
+}
+
+#search-btn {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  i {
+    color: black;
+  }
+}
+

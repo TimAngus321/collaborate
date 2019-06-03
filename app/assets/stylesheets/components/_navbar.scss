@@ -1,6 +1,6 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: black;
+  background-color: black;
   font-family: 'Audiowide', cursive;
 }
 
@@ -15,17 +15,37 @@
   font-family: 'Audiowide', cursive;
 }
 
-.btn-light {
-  color: white;
+.navbar-actions {
+  color: #ede8e8;
+  font-weight: bold;
   font-family: 'Audiowide', cursive;
-  background-color: #C420C8;
-  margin-right: 10px;
+  margin: 10px;
+  text-decoration: none;
+  text-align: center;
+
 }
+.navbar-actions:hover {
+  color: #C420C8;
+  transition: 0.2s;
+}
+
+
 
 .navbar-link:hover {
   text-decoration: none;
   font-family: 'Audiowide', cursive;
 }
+
+
+
+#navbarDropdown {
+  color: #ede8e8;
+  font-size: 30px;
+}
+
+#navbarDropdown:hover {
+  color: #C420C8;
+  transition: 0.2s;
 
 .fa-search {
   color: white;
@@ -33,6 +53,7 @@
 
 .searchbar {
   display: inline-block;
+
 }
 
 #search-btn {

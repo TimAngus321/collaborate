@@ -12,7 +12,6 @@
       <%= r.input :end_second %>
       <%= r.input :description %>
       <%= r.collection_select :instrument_id, Instrument.all, :id, :name %>
-      <%= r.collection_select :genre_id, Genre.all, :id, :name %>
       <%= r.submit "Add a Collab Request", class: "btn btn-primary"%>
     <% end %>
   </div>

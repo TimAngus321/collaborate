@@ -27,5 +27,20 @@
   font-family: 'Audiowide', cursive;
 }
 
-.side-buttons {
+.fa-search {
+  color: white;
 }
+
+.searchbar {
+  display: inline-block;
+}
+
+#search-btn {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  i {
+    color: black;
+  }
+}
+

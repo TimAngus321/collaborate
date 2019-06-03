@@ -1,17 +1,18 @@
 <div class="container">
   <h1>Hello, <%= @user.first_name %>!</h1>
-  <h2>username: </h2><p><%= @user.username %></p>
-  <h2>First name: </h2><p><%= @user.first_name %></p>
-  <h2>Last name: </h2><p><%= @user.last_name %></p>
-  <h2>Bio:</h2><p><%= @user.biography %></p>
-    <p>Instrument skills: <% @user.instruments.each do |instrument| %>
+  <h2>Username </h2><p><%= @user.username %></p>
+  <h2>First name </h2><p><%= @user.first_name %></p>
+  <h2>Last name </h2><p><%= @user.last_name %></p>
+  <h2>Bio </h2><p><%= @user.biography %></p>
+    <h2>Instrument skills </h2><p><% @user.instruments.each do |instrument| %>
     <%= instrument.name %>
     <% end %></p>
-    <p> Genres: <% @user.genres.each do |genre| %>
+    <h2> Genres </h2><p><% @user.genres.each do |genre| %>
     <%= genre.name %>
     <% end %></p>
     <%= link_to 'Edit my profile', edit_user_path(current_user), class: "btn btn-dark" %>
 </div>
+<p></p>
 
 
 

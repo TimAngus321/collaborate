@@ -1,20 +1,22 @@
 <div class="container">
-  <h1>Collaborate with <%= @request.track.user.username %></h1>
 
-  <p><%= @request.description %></p>
+  <div class="request-show-header">
+    <h1>Collaborate with <%= @request.track.user.username %></h1>
+    <h4><%= @request.description %></h4>
+  </div>
 
   <%= render 'shared/track', track: @request.track %>
 
+  <div class="request-show-btn">
+    <%= link_to "Return to Tracks Timeline", requests_path, class: "btn" %>
+    <%= link_to "Placeholder for Download", request_path, class: "btn" %>
+  </div>
 
-  <%= link_to "Return to Tracks Timeline", requests_path, class: "btn btn-primary" %>
+  <div class="request-show-call-to-action">
+    <h1>Post a track to collaborate with <%= @request.track.user.username %></h1>
+  </div>
 
-  <%= link_to "Placeholder for Download", request_path, class: "btn btn-danger" %>
-
-
-
-<h1>Post a track to collaborate with <%= @request.track.user.username %></h1>
-
-<div class="tracks-form">
+  <div class="request-submission-form">
     <%= simple_form_for ([@request, @submission]) do |s| %>
       <%= s.input :description %>
       <%= s.input :name %>
@@ -23,16 +25,18 @@
       <%= s.input :key %>
       <%= s.input :duration %>
       <%= s.input :file %>
-      <%= s.submit "Collaborate", class: "btn btn-primary"%>
+      <div class="request-show-call-to-action-btn">
+        <%= s.submit "Collaborate", class: "btn btn-primary"%>
+      </div>
     <% end %>
   </div>
 
-  <div>
-    <h2>Already submitted:</h2>
+  <div class="request-show-submissions">
+    <div class="request-show-submissions-header">
+      <h2>Submissions</h2>
+    </div>
     <% @request.submissions.each do |submission|  %>
       <%= render 'shared/submission_card', submission: submission %>
-
     <% end %>
-
   </div>
 </div>

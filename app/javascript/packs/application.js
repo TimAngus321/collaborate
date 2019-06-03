@@ -1,4 +1,5 @@
 import "bootstrap";
+
 import WaveSurfer from 'wavesurfer.js';
 
 $(document).ready(function() {

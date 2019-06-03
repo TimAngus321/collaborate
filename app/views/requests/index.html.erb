@@ -2,6 +2,12 @@
   <div class="index-title">
     <h1>All Collaboration Track Requests </h1>
     <h2><i class="fas fa-search"></i>Search</h2>
+    <%= form_tag requests_path, method: :get do %>
+    <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Search for a track" %>
+    <% end %>
   </div>
 
   <div class="row justify-content-center">

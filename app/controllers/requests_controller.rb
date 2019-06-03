@@ -1,6 +1,8 @@
 class RequestsController < ApplicationController
   def index
     @requests = Request.all
+    if params[:query].present?
+      @requests = Request.where("ILIKE ?", "%#{params[:query]}%")
   end
 
   def show

@@ -1,5 +1,9 @@
+#request-show-container {
+  background-image: url("../../images/prism.png");
+}
+
 .request-show-header {
-  margin: 55px;
+  margin: 65px;
   text-shadow: 1px 1px;
 }
 
@@ -12,6 +16,8 @@
     height: 75px;
     width: 350px;
     font-size: 30;
+    padding: 25px;
+    border-radius: 8px;
   }
 }
 

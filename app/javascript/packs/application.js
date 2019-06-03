@@ -9,7 +9,7 @@ $(document).ready(function() {
     let wave = WaveSurfer.create({
       container: `#${track.id}`,
       waveColor: 'black',
-      progressColor: '#D1D1D1',
+      progressColor: '#C420C8',
       mediaControls: true,
       backend: 'MediaElement'
       // mediaType: 'audio',

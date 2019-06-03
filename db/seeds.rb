@@ -49,6 +49,70 @@ Genre.create!(
   name: 'Michael Wong Style'
   )
 
+Genre.create!(
+  name: 'Swing'
+  )
+
+Genre.create!(
+  name: 'DnB'
+  )
+
+Genre.create!(
+  name: 'Jazz'
+  )
+
+Genre.create!(
+  name: 'House'
+  )
+
+Genre.create!(
+  name: 'LoFi'
+  )
+
+Genre.create!(
+  name: 'Blues'
+  )
+
+Genre.create!(
+  name: 'Reggae'
+  )
+
+Genre.create!(
+  name: 'Ska'
+  )
+
+Genre.create!(
+  name: 'Hip Hop'
+  )
+
+Genre.create!(
+  name: 'Trap'
+  )
+
+Genre.create!(
+  name: 'Big Band'
+  )
+
+Genre.create!(
+  name: 'R&B'
+  )
+
+Genre.create!(
+  name: 'Soul'
+  )
+
+Genre.create!(
+  name: 'Hard Rock'
+  )
+
+Genre.create!(
+  name: 'Avant-Garde'
+  )
+
+Genre.create!(
+  name: 'Berlin Techno'
+  )
+
 puts "#{Genre.count} Genres created"
 puts 'Creating Instruments!'
 
@@ -178,7 +242,7 @@ User.create!(
   password: '123456',
   first_name: 'Geoff',
   last_name: 'Butler',
-  biography: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi laboriosam perferendis ea, omnis! Eligendi animi pariatur accusamus inventore autem. Tempora voluptatem maxime necessitatibus, blanditiis vero obcaecati officia quibusdam quis nobis!',
+  biography: 'Devoted music nerd. Pop culture evangelist. Award-winning tv aficionado. Web fan. Hardcore bacon fanatic.',
   facebook_url: ''
   )
 
@@ -188,7 +252,7 @@ User.create!(
   password: '123456',
   first_name: 'Erik',
   last_name: 'Hammond',
-  biography: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi laboriosam perferendis ea, omnis! Eligendi animi pariatur accusamus inventore autem. Tempora voluptatem maxime necessitatibus, blanditiis vero obcaecati officia quibusdam quis nobis!',
+  biography: 'Wannabe troublemaker. Coffee fanatic. Unapologetic musicaholic. Avid zombie nerd.',
   facebook_url: ''
   )
 
@@ -198,7 +262,7 @@ User.create!(
   password: '123456',
   first_name: 'Alexander',
   last_name: 'Voggenhuber',
-  biography: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi laboriosam perferendis ea, omnis! Eligendi animi pariatur accusamus inventore autem. Tempora voluptatem maxime necessitatibus, blanditiis vero obcaecati officia quibusdam quis nobis!',
+  biography: 'Pop culture geek. Food advocate. Freelance tv fanatic. Extreme alcohol aficionado. Explorer. Wannabe bacon specialist.',
   facebook_url: ''
   )
 
@@ -208,7 +272,7 @@ User.create!(
   password: '123456',
   first_name: 'Dave',
   last_name: 'Davidson',
-  biography: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi laboriosam perferendis ea, omnis! Eligendi animi pariatur accusamus inventore autem. Tempora voluptatem maxime necessitatibus, blanditiis vero obcaecati officia quibusdam quis nobis!',
+  biography: 'Pop culture advocate. Infuriatingly humble communicator. Music fanatic. Friendly thinker.',
   facebook_url: ''
   )
 
@@ -218,7 +282,7 @@ User.create!(
   password: '123456',
   first_name: 'Vassili',
   last_name: 'Antonov',
-  biography: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi laboriosam perferendis ea, omnis! Eligendi animi pariatur accusamus inventore autem. Tempora voluptatem maxime necessitatibus, blanditiis vero obcaecati officia quibusdam quis nobis!',
+  biography: 'Tv evangelist. Friendly travel ninja. Writer. Avid troublemaker. Organizer.',
   facebook_url: ''
   )
 
@@ -228,7 +292,7 @@ User.create!(
   password: '123456',
   first_name: 'Berndt',
   last_name: 'Oettinger',
-  biography: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi laboriosam perferendis ea, omnis! Eligendi animi pariatur accusamus inventore autem. Tempora voluptatem maxime necessitatibus, blanditiis vero obcaecati officia quibusdam quis nobis!',
+  biography: 'Writer. Wannabe thinker. Devoted gamer. Student. Internet enthusiast. Introvert. Explorer.',
   facebook_url: ''
   )
 
@@ -238,7 +302,7 @@ User.create!(
   password: '123456',
   first_name: 'Simon',
   last_name: 'May',
-  biography: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi laboriosam perferendis ea, omnis! Eligendi animi pariatur accusamus inventore autem. Tempora voluptatem maxime necessitatibus, blanditiis vero obcaecati officia quibusdam quis nobis!',
+  biography: 'Internetaholic. Certified alcohol buff. Beer. Food. Good Music.',
   facebook_url: ''
   )
 
@@ -248,7 +312,7 @@ User.create!(
   password: '123456',
   first_name: 'Hugh',
   last_name: 'Mungus',
-  biography: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi laboriosam perferendis ea, omnis! Eligendi animi pariatur accusamus inventore autem. Tempora voluptatem maxime necessitatibus, blanditiis vero obcaecati officia quibusdam quis nobis!',
+  biography: 'Student. Award-winning entrepreneur. Hipster-friendly introvert. Infuriatingly humble organizer.',
   facebook_url: ''
   )
 

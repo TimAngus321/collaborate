@@ -3,6 +3,8 @@ class Track < ApplicationRecord
   belongs_to :user
   has_many :requests
   has_many :submissions
+  belongs_to :genre, optional: true
+
   validates :name, presence: true
   validates :bpm, presence: true
   validates :time_signature, presence: true

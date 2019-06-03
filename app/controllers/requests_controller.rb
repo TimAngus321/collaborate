@@ -1,6 +1,11 @@
 class RequestsController < ApplicationController
   def index
     @requests = Request.all
+    if params[:query].present?
+      @requests = Request.search_by_instrument_and_genre(params[:query])
+    else
+      @requests = Request.all
+    end
   end
 
   def show

@@ -1,0 +1,37 @@
+.request-show-header {
+  margin: 55px;
+  text-shadow: 1px 1px;
+}
+
+.request-show-btn {
+  display: flex;
+  justify-content: space-around;
+  margin: 50px;
+  .btn {
+    background-color: red;
+    height: 75px;
+    width: 350px;
+    font-size: 30;
+  }
+}
+
+.request-show-call-to-action {
+  margin-top: 175px;
+  margin-bottom: 75px;
+  text-align: center;
+}
+
+.request-submission-form {
+  border: outset;
+  padding: 15px;
+  border-width: 10px 10px 10px 10px;
+  width: 500px;
+  margin: auto;
+}
+
+.request-show-submissions {
+  margin-top: 75px;
+  .request-show-submissions-header {
+    margin: 20px;
+  }
+}

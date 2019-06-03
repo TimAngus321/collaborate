@@ -12,7 +12,9 @@
     <%= favicon_link_tag asset_path('https://res.cloudinary.com/beartechnologies/image/upload/v1559209651/collaborate/c_symbol2_zxudvw.jpg') %>
   </head>
   <body>
+    <% unless action_name == "home" %>
     <%= render 'shared/navbar' %>
+    <% end %>
     <%= render 'shared/flashes' %>
     <%= yield %>
     <%= javascript_include_tag 'application' %>

@@ -1,21 +1,26 @@
 <div class="container">
-  <div class="title">
-    <h1>Add A track</h1>
-  </div>
+  <div class="row">
+    <div class="col-xs-12 col-sm-8 col-sm-offset-4">
+      <div class="container">
+        <div class="title">
+          <h1>Add A track</h1>
+        </div>
 
-  <div class="tracks-form">
-    <%= simple_form_for ([@track]) do |t| %>
-      <%= t.input :name %>
-      <%= t.input :bpm %>
-      <%= t.input :time_signature %>
-      <%= t.input :key %>
-      <%= t.input :duration %>
-      <%= t.association :genre, selected: Genre.first %>
-      <%= t.input :file %>
-      <%= t.submit "Add a New Track", class: "btn btn-primary"%>
-    <% end %>
+          <div class="tracks-form">
+            <%= simple_form_for ([@track]) do |t| %>
+              <%= t.input :name %>
+              <%= t.input :bpm %>
+              <%= t.input :time_signature %>
+              <%= t.input :key %>
+              <%= t.input :duration %>
+              <%= t.association :genre, selected: Genre.first %>
+              <%= t.input :file %>
+              <%= t.submit "Add a New Track", class: "btn btn-light"%>
+            <% end %>
+      </div>
+    <div>
   </div>
-  <div>
- <!--    button somewhere -->
+</div>
+    </div>
   </div>
 </div>

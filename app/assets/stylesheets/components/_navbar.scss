@@ -46,6 +46,7 @@
 #navbarDropdown:hover {
   color: #C420C8;
   transition: 0.2s;
+}
 
 .fa-search {
   color: white;
@@ -63,5 +64,12 @@
   i {
     color: black;
   }
+}
+
+.btn-light {
+  color: white;
+  font-family: 'Audiowide', cursive;
+  background-color: #C420C8;
+  margin-right: 10px;
 }
 

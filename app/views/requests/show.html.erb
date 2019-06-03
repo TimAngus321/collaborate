@@ -12,20 +12,10 @@
 
 
 
-<h1>Post a track to collaborate with <%= @request.track.user.username %></h1>
+<h1>Click below to collaborate with <%= @request.track.user.username %></h1>
+<%= link_to "Collaborate", new_request_submission_path(@request), class: "btn btn-primary" %>
 
-<div class="tracks-form">
-    <%= simple_form_for ([@request, @submission]) do |s| %>
-      <%= s.input :description %>
-      <%= s.input :name %>
-      <%= s.input :bpm %>
-      <%= s.input :time_signature %>
-      <%= s.input :key %>
-      <%= s.input :duration %>
-      <%= s.input :file %>
-      <%= s.submit "Collaborate", class: "btn btn-primary"%>
-    <% end %>
-  </div>
+
 
   <div>
     <h2>Already submitted:</h2>

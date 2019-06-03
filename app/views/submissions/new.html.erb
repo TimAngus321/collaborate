@@ -1,2 +1,16 @@
-<h1>Post a track to collaborate with <%= @request.user_id.name %></h1>
+<h1>Post a track to collaborate with <%= @submission.request %></h1>
+
+
+<div class="tracks-form">
+    <%= simple_form_for ([@request, @submission]) do |s| %>
+      <%= s.input :description %>
+      <%= s.input :name %>
+      <%= s.input :bpm %>
+      <%= s.input :time_signature %>
+      <%= s.input :key %>
+      <%= s.input :duration %>
+      <%= s.input :file %>
+      <%= s.submit "Collaborate", class: "btn btn-primary"%>
+    <% end %>
+  </div>
 

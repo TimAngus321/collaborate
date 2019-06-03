@@ -12,23 +12,11 @@
     <%= link_to "Placeholder for Download", request_path, class: "btn" %>
   </div>
 
-  <div class="request-show-call-to-action">
-    <h1>Post a track to collaborate with <%= @request.track.user.username %></h1>
-  </div>
-
-  <div class="request-submission-form">
-    <%= simple_form_for ([@request, @submission]) do |s| %>
-      <%= s.input :description %>
-      <%= s.input :name %>
-      <%= s.input :bpm %>
-      <%= s.input :time_signature %>
-      <%= s.input :key %>
-      <%= s.input :duration %>
-      <%= s.input :file %>
-      <div class="request-show-call-to-action-btn">
-        <%= s.submit "Collaborate", class: "btn btn-primary"%>
-      </div>
-    <% end %>
+  <div class="request-show-collab-btn">
+    <div class="request-show-collab-header">
+      <h1>Click below to collaborate with <%= @request.track.user.username %></h1>
+    </div>
+    <%= link_to "Collaborate", new_request_submission_path(@request), class: "btn btn-primary" %>
   </div>
 
   <div class="request-show-submissions">

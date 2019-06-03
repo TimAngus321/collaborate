@@ -5,7 +5,7 @@ class RequestsController < ApplicationController
 
   def show
     @request = Request.find(params[:id])
-    @submission = Submission.new
+    # @submission = Submission.new
     # @submission.submission_card = Submission.find(params[:request_id])
     # @submission.instrument = Instrument.find(params[:submission][:instrument_id])
   end

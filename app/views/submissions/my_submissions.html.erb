@@ -1,13 +1,10 @@
 <div class="container">
   <h1>My Submissions to Collaboration Requests </h1>
   <% @submissions.each do |submission| %>
+    <h2>Your submission on <%= submission.request.track.user %>'s request</h2>
     <p>Description: <%= submission.description %></p>
     <%= render 'shared/submission_card', submission: submission %>
-    <p>Name: <%= submission.name %></p>
-    <p>BPM: <%= submission.bpm %></p>
-    <p>Time Signature: <%= submission.time_signature %></p>
-    <p>Key: <%= submission.key %></p>
-    <p>Duration: <%= submission.duration %></p>
     <%= link_to 'Delete Submission', submission_path(submission), method: :delete, data: { confirm: "Are you sure you want to Delete your submission?" }, class: "btn btn-dark" %>
   <% end %>
 </div>
+

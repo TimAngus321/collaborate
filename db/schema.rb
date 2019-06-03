@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_31_124359) do
+ActiveRecord::Schema.define(version: 2019_06_03_095637) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -66,8 +66,9 @@ ActiveRecord::Schema.define(version: 2019_05_31_124359) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "file"
-    t.string "genre"
     t.text "soundcloud_url"
+    t.bigint "genre_id"
+    t.index ["genre_id"], name: "index_tracks_on_genre_id"
     t.index ["user_id"], name: "index_tracks_on_user_id"
   end
 
@@ -110,6 +111,7 @@ ActiveRecord::Schema.define(version: 2019_05_31_124359) do
   add_foreign_key "requests", "tracks"
   add_foreign_key "submissions", "requests"
   add_foreign_key "submissions", "users"
+  add_foreign_key "tracks", "genres"
   add_foreign_key "tracks", "users"
   add_foreign_key "user_genres", "genres"
   add_foreign_key "user_genres", "users"

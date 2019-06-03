@@ -13,7 +13,7 @@
 
 
 <h1>Click below to collaborate with <%= @request.track.user.username %></h1>
-<%= link_to "Collaborate", new_submission_path, class: "btn btn-primary" %>
+<%= link_to "Collaborate", new_request_submission_path(@request), class: "btn btn-primary" %>
 
 
 

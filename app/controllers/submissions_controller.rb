@@ -5,6 +5,7 @@ class SubmissionsController < ApplicationController
 
   def new
     @submission = Submission.new
+    @request = Request.find(params[:request_id])
   end
 
   def show

@@ -1,0 +1,37 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80);">
+  <div class="container">
+    <div class="container">
+    <h1 class="howto">How to use Collaborate</h1>
+
+      <div class="circle-cards">
+
+        <div class="circle-card">
+          <img src="https://res.cloudinary.com/beartechnologies/image/upload/v1559504565/man6_ltp5tt.png">
+          <h3 class="info-card-title">Something missing?</h3>
+          <p class="paragraph">Sometimes you need some vocal or instrumental element to finish a track</p>
+        </div>
+
+        <div class="circle-card">
+          <img src="https://res.cloudinary.com/beartechnologies/image/upload/v1559492699/man_copy_ca2avq.png" alt="Bass">
+          <h3 class="info-card-title">Search our site!</h3>
+          <p class="paragraph">Search from 1000s of users willing to contribute the element you need! </p>
+        </div>
+
+        <div class="circle-card">
+          <img src="https://res.cloudinary.com/beartechnologies/image/upload/v1559492882/man4_l2s4ob.png">
+          <h3 class="info-card-title">Done!</h3>
+          <p class="paragraph">Once you find an element, mix it into the track in your own software and done!</p>
+
+        </div>
+      </div>
+      <% if !user_signed_in? %>
+      <%= link_to "Join now", new_user_registration_path, class: "btn btn-light" %>
+      <% else %>
+      <%= link_to "Finish your track now!", requests_path, class: "btn btn-light" %>
+    <% end %>
+  </div>
+  </div>
+</div>
+
+
+

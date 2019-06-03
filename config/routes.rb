@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users, controllers: { registrations: "registrations" }
   root to: 'pages#home'
+  get '/wikihow', to: 'pages#wikihow'
   get '/my_final_tracks', to: 'users#my_final_tracks'
 
 

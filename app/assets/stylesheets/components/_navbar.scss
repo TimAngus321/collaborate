@@ -97,3 +97,17 @@
   background:  transparent;
 }
 
+.dropdown-menu {
+  padding: 0px;
+  margin: 0.75rem 0 0;
+}
+
+.dropdown-menu-right {
+  right: -16px;
+}
+
+.dropdown-item:hover {
+  background-color: #C420C8;
+  color: white;
+}
+

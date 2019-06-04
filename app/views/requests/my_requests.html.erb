@@ -1,8 +1,10 @@
 <div class="container">
-  <h1>My Collaboration Track Requests: </h1>
+  <div class="title-container">
+    <h1>My Collaboration Track Requests: </h1>
+  </div>
   <% @requests.each do |request| %>
-    <p>Description: <%= request.description %></p>
+    <p class="description">Description: <%= request.description %></p>
     <%= render 'shared/track', track: request.track %>
-    <%= link_to 'Delete request', request_path(request), method: :delete, data: { confirm: "Are you sure you want to Delete your request?" }, class: "btn btn-dark" %>
+    <%= link_to 'Delete request', request_path(request), method: :delete, data: { confirm: "Are you sure you want to Delete your request?" }, class: "btn btn-delete" %>
   <% end %>
 </div>

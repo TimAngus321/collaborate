@@ -17,3 +17,46 @@
     color: white;
   }
 }
+
+
+  .lockup-title {
+      margin: 70px 17px;
+      margin-bottom: 54px;
+      .number-high {
+        color: #c420c8;
+      }
+  }
+.index-title {
+  h1 {
+      text-align: center;
+      color: #3a036d;
+      font-size: 27px;
+  }
+
+}
+    .btn-soft {
+      color: #6b478f;
+      background-color: #ffffff;
+      border: solid 1px #6b478f;
+      margin-right: 10px;
+    }
+
+.text-title-index {
+  font-family: sans-serif;
+  max-width: 450px;
+}
+
+
+.index-cards {
+  a {
+    text-decoration: none;
+  }
+  .track-card-hull {
+    transition: ease all 1s;
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 85px rgba(0, 0, 0, 0.2);
+
+    }
+  }
+}

@@ -3,7 +3,7 @@
   background-size: cover;
   background-position: center;
   padding: 60px 0;
-  height: 100vh;
+  height: 58vh;
   color: white;
 }
 
@@ -12,26 +12,25 @@
 // }
 
 .circle-card {
-  width: 300px;
+    width: 300px;
+  -o-object-fit: cover;
   object-fit: cover;
+  margin-bottom: 64px;
   color: white;
   border: 2px;
-  border-color: lightgrey;
-  background-color: rgba( 211, 211, 211, 0.3);
+  border-color: #fbfbfb;
+  background-color: rgb(255, 255, 255);
   border-radius: 10px;
+  box-shadow: 1px 1px 21px lightgrey;
 }
 
 .circle-card img {
-  height: 200px;
-  width: 200px;
-  object-fit: cover;
-  border-radius: 50%;
-  box-shadow: 1px 1px 5px lightgrey;
-  color: white;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-left: 50px;
-  position: center;
+  height: 166px;
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    color: white;
+    position: center;
 }
 
 .wiki-heading {
@@ -44,16 +43,23 @@
   color: white;
 }
 
-.circle-card p {
-    margin-top: 0;
-    margin-bottom: 2rem;
-    color: white;
-    text-shadow: 1px 1px 5px lightgrey;
+.circle-card h3 {
+  text-align: center;
+  margin: 30px 0;
+  margin-bottom: 9px;
+  color: #3a046d;
+
 }
 
-.btn-light {
-  margin: 20px;
+.circle-card p {
+    margin-top: 0;
+    color: #000000b8;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 14px;
+    padding: 13px;
 }
+
 
 .paragraph {
   margin: 10px;

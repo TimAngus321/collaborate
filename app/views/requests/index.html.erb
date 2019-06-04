@@ -1,14 +1,17 @@
 <div class="container">
-  <div class="index-title">
-    <h1>All Collaboration Track Requests </h1>
-  </div>
+  <div class="lockup-title d-flex justify-content-between">
+    <div class="index-title">
+      <h1><b class="number-high"><%= @requests.count %></b> tracks you can collaborate on.</h1>
+      <br>
+      <p class="text-title-index">Click on a track to begin sumbittimg collaboration request to othe artist in our platform</p>
+    </div>
 
-  <div class="row justify-content-center">
-    <div class="index-call-to-action">
-      <%= link_to "Add a new request", new_track_path, class: "btn index-btn" %>
+    <div class="row justify-content-center">
+      <div class="index-call-to-action">
+        <%= link_to "+ Add a new request", new_track_path, class: "btn btn-soft" %>
+      </div>
     </div>
   </div>
-
   <div class="index-cards">
     <% @requests.each do |request| %>
       <%= link_to request_path(request) do %>

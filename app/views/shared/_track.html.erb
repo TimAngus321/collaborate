@@ -1,9 +1,9 @@
 
-<div class="track-card-hull">
   <div class="track-card-header">
-    <h3><%= track.user.username %></h2>
     <h4><%= track.name %></h1>
+    <h3>By: <%= track.user.username %></h2>
   </div>
+<div class="track-card-hull">
 
   <div class="track-card-wav">
     <div id="track_<%= track.id %>" class="<%= "waveform" if track.file %>" data-track-url='<%= track.file.url(secure: true) %>'></div>

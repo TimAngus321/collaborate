@@ -17,3 +17,36 @@
     margin-bottom: 20px
   }
 }
+
+
+.tracks-form {
+  label {
+    color: grey;
+  }
+  .submission_file {
+      display: flex;
+      label {
+        margin-right: 20px;
+      }
+
+  }
+  max-width: 700px;
+  margin: auto;
+  border-radius: 3px;
+  margin-top: 44px;
+  padding: 40px;
+  background: white;
+  box-shadow: 1px 1px 10px lightgrey;
+  h1 {
+    font-size: 29px;
+    margin-bottom: 20px;
+    text-align: left;
+    color: #3a036d;
+    font-size: 27px;
+  }
+  .btn {
+    width: 100%;
+    background-color: #c420c8;
+    border-color: #c420c8;
+  }
+}

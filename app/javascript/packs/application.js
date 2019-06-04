@@ -32,7 +32,9 @@ $(document).ready(function() {
       ]
 
     });
-    wave.load(track.dataset.trackUrl);
+    if (track.dataset.trackUrl) {
+      wave.load(track.dataset.trackUrl);
+    }
     // document.querySelectorAll(track)
     wave.getCurrentTime({
       container: `#${track.id}`

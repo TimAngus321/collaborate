@@ -1,6 +1,6 @@
 .track-card-hull {
   overflow: hidden;
-  height:260px;
+  height: 300px;
   background: light-gray;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   border-radius: 5px;
@@ -10,6 +10,10 @@
   margin-bottom: 90px;
   color: black;
   font-family: 'Work Sans', sans-serif;
+}
+
+.track-card-wav {
+  margin-bottom: 20px;
 }
 
 .track-wav-details {

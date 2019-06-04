@@ -2,11 +2,22 @@
 <div class="submission-card-hull">
   <div class="submission-card-header">
     <h3><%= submission.user.username %></h3>
+    <% if submission.selected %>
+      <strong class="accepted-btn">SELECTED</strong>
+      <% elsif submission.selected == false %>
+    <% elsif !submission.selected && submission.user != current_user %>
+      <%= link_to submission_path(submission), method: :patch, class: "selected-btn" do %>
+        <strong>Accept Submission?</strong>
+      <% end %>
+    <% end %>
+
     <h4><%= submission.name %></h4>
   </div>
 
+
   <div class="submission-card-wav">
-    <div id="submission_<%= submission.id %>" class="<%= 'waveform' if submission.file %>" data-track-url='<%= submission.file.url(secure: true) %>'></div>
+    <div id="track_<%= submission.id %>" class="<%= 'waveform' if submission.file %>" data-track-url='<%= submission.file.url(secure: true) %>'></div>
+    <div id="wave_timeline_track_<%= submission.id %>"></div>
   </div>
 
   <div class="submission-wav-details">
@@ -15,5 +26,8 @@
     <p><strong>Time Signature:  </strong><%= submission.time_signature %></p>
     <p><strong>Key:  </strong><%= submission.key %></p>
   </div>
+
+
+
 </div>
 

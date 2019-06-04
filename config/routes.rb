@@ -16,4 +16,5 @@ Rails.application.routes.draw do
     resources :submissions, only: [:new, :create]
   end
   resources :submissions, only: [:show, :index, :edit, :update, :destroy]
+  resources :request_timecodes, only: [ :update ]
 end

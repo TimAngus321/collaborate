@@ -11,8 +11,4 @@ class User < ApplicationRecord
   has_many :user_genres
   has_many :genres, through: :user_genres
   has_many :final_tracks
-  validates :username, presence: true
-  validates :first_name, presence: true
-  validates :last_name, presence: true
-  validates :biography, presence: true
 end

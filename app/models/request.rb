@@ -12,11 +12,10 @@ class Request < ApplicationRecord
 
   pg_search_scope :search_by_instrument_and_genre,
     associated_against: {
-      instrument: [ :name ],
+      instrument: [:name],
       genre: :name
     },
     using: {
       tsearch: { prefix: true }
     }
-
 end

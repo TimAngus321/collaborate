@@ -3,8 +3,16 @@
 }
 
 .request-show-header {
-  margin: 65px;
-  text-shadow: 1px 1px;
+  margin: 70px 17px;
+  h1 {
+    text-align: left;
+    color: #3a036d;
+    font-size: 27px;
+  }
+  h4 {
+    font-size: 16px;
+    max-width: 500px ;
+  }
 }
 
 .request-show-btn {
@@ -37,7 +45,21 @@
 
 .request-show-submissions {
   margin-top: 75px;
+  border-top: 3px solid #3a046d;
   .request-show-submissions-header {
     margin: 20px;
+    h4 {
+          font-size: 16px;
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+    }
+    h2 {
+      margin: 12px 17px;
+      margin-top: 40px;
+         color: #3a046d;
+  text-align: center;
+  font-family: "Audiowide"
+    }
   }
 }

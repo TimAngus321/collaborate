@@ -1,12 +1,13 @@
 .track-card-hull {
   overflow: hidden;
-  height: 300px;
+  height:260px;
   background: light-gray;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   border-radius: 5px;
   align-items: center;
   margin: 15px;
   padding: 10px;
+  margin-bottom: 90px;
   color: black;
   font-family: 'Work Sans', sans-serif;
 }
@@ -30,8 +31,43 @@
 .track-card-header {
   display: flex;
   justify-content: space-between;
-  margin-top: 10px;
-  margin-left: 65px;
-  margin-right: 65px;
   font-family: 'Work Sans', sans-serif;
+  h3, h4 {
+    font-size: 20px;
+    padding: 0 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  h3 {
+    color: #3a046d;
+  }
+  h4 {
+    color: #c420c8;
+  }
+}
+
+#request-show-container {
+  .btn-light {
+    height: 58px;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    padding: 15px 25px;
+  }
+  .track-card-header {
+    margin-top: 40px;
+  }
+  .btn-back {
+    color: #6b478f;
+    background-color: #ffffff;
+    border: solid 1px #6b478f;
+    margin-right: 10px;
+  }
+  .request-show-back {
+        margin: 30px 17px;
+  }
+  .btn-light-2 {
+    border: solid 1px #c420c8;
+    background: white;
+    color: #c420c8;
+  }
 }

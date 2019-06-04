@@ -1,22 +1,23 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-    <%= link_to root_path, class: "navbar-brand" do %>
-        <%= image_tag "https://res.cloudinary.com/beartechnologies/image/upload/v1559209651/collaborate/c_symbol2_zxudvw.jpg" %>
-      <% end %>
-  <div class="searchbar">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-      </button>
-      <div>
-      <form action="/requests" accept-charset="UTF-8" method="get" style="position: relative;" class="form-search">
-      <input name="utf8" type="hidden" value="✓">
+  <div class="right-side-lockup">
+      <%= link_to root_path, class: "navbar-brand" do %>
+          <%= image_tag "https://res.cloudinary.com/beartechnologies/image/upload/v1559209651/collaborate/c_symbol2_zxudvw.jpg" %>
+        <% end %>
+    <div class="searchbar">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div>
+        <form action="/requests" accept-charset="UTF-8" method="get" style="position: relative;" class="form-search">
+        <input name="utf8" type="hidden" value="✓">
 
 
-      <input type="text" name="query" id="query" class="form-control" label="false" placeholder="Search requests" wrapper_html="{:class=>&quot;fas fa-search&quot;}">
-       <button type="submit" class="btn btn-link" id="search-btn"><i class="fas fa-search"></i></button>
-      </form>
+        <input type="text" name="query" id="query" class="form-control" label="false" placeholder="Search requests" wrapper_html="{:class=>&quot;fas fa-search&quot;}">
+         <button type="submit" class="btn btn-link" id="search-btn"><i class="fas fa-search"></i></button>
+        </form>
+      </div>
     </div>
-  </div>
-
+</div>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">

@@ -1,29 +1,27 @@
 <div class="container" id="request-show-container">
-
-  <div class="request-show-header">
-    <h1>Collaborate with <%= @request.track.user.username %></h1>
-    <h4><%= @request.description %></h4>
+    <div class="request-show-back">
+    <%= link_to "< Back", requests_path, class: "btn btn-back" %>
   </div>
-
   <%= render 'shared/track', track: @request.track %>
 
-  <div class="request-show-btn">
-    <%= link_to "Return to Tracks Timeline", requests_path, class: "btn" %>
-    <%= link_to "Placeholder for Download", request_path, class: "btn" %>
-  </div>
-
-  <div class="request-show-collab">
-    <div class="request-show-collab-header">
-      <h1>Click below to collaborate with <%= @request.track.user.username %></h1>
+  <div class="request-show-header d-flex justify-content-between">
+    <div>
+      <h1>Collaborate with <%= @request.track.user.username %></h1>
+      <h4><%= @request.description %></h4>
     </div>
-    <div class="request-show-collab-btn">
-      <%= link_to "Collaborate", new_request_submission_path(@request), class: "btn btn-primary" %>
+    <br>
+    <div>
+    <%= link_to "DOWNLOAD", request_path, class: "btn btn-light" %>
+    <%= link_to "UPLOAD", new_request_submission_path(@request), class: "btn btn-light btn-light-2" %>
     </div>
   </div>
 
   <div class="request-show-submissions">
     <div class="request-show-submissions-header">
       <h2>Submissions</h2>
+      <h4><%= @request.description %></h4>
+      <br>
+      <br>
     </div>
     <% @request.submissions.each do |submission|  %>
       <%= render 'shared/submission_card', submission: submission %>

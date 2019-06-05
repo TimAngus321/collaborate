@@ -17,4 +17,5 @@ Rails.application.routes.draw do
   end
   resources :submissions, only: [:show, :index, :edit, :update, :destroy]
   resources :request_timecodes, only: [ :update ]
+  patch '/submissions/:id/accept', to: "submissions#accept", as: :accept_submission
 end

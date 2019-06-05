@@ -34,6 +34,12 @@ class SubmissionsController < ApplicationController
     redirect_to @submission.request
   end
 
+  def accept
+    @submission = Submission.find(params[:id])
+    @submission.update(selected: true) if @submission.user != current_user
+    redirect_to @submission.request
+  end
+
   def destroy
     @submission = Submission.find(params[:id])
     @submission.destroy

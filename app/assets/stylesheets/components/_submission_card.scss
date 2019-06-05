@@ -11,6 +11,22 @@
   font-family: 'Work Sans', sans-serif;
 }
 
+.submission-card-header {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-left: 65px;
+  margin-right: 65px;
+  font-family: 'Work Sans', sans-serif;
+}
+
+.descripiton {
+  display: flex;
+  align-items: flex-end;
+  padding: 5px;
+  justify-content: space-around;
+}
+
 .submission-wav-details {
   display: flex;
   align-items: flex-end;
@@ -26,31 +42,35 @@
   padding: 5px;
 }
 
-
-.submission-card-header {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 10px;
-  margin-left: 65px;
-  margin-right: 65px;
-  font-family: 'Work Sans', sans-serif;
-}
-
-.selected-btn {
-  color: black;
-  background-color: #C420C8;
-  margin: 10px;
-  opacity: 0.7;
+.submission-btn {
+  text-align: center;
+  vertical-align: center;
+  background-color: transparent;
+  border-color: black;
   padding: 5px;
 }
 
-.selected-btn:hover {
-  opacity: 1;
+.submission-btn:hover {
+  background-color: #c420c8;
 }
 
-.accepted-btn {
-  color: white;
-  background-color: green;
-  margin: 10px;
-  padding: 5px;
-}
+
+
+// .selected-btn {
+//   color: black;
+//   background-color: #C420C8;
+//   margin: 10px;
+//   opacity: 0.7;
+//   padding: 5px;
+// }
+
+// .selected-btn:hover {
+//   opacity: 1;
+// }
+
+// .accepted-btn {
+//   color: white;
+//   background-color: green;
+//   margin: 10px;
+//   padding: 5px;
+// }

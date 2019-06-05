@@ -1,8 +1,11 @@
 class RequestTimecodesController < ApplicationController
   def update
     @request = Request.find(params[:id])
-    @request.update(timecode_params)
-    head :ok
+    if @request.update(timecode_params)
+      render json: @request
+    else
+      head "500"
+    end
   end
 
   def timecode_params

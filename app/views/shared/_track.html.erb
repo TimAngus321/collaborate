@@ -6,7 +6,7 @@
 <div class="track-card-hull">
 
   <div class="track-card-wav">
-    <div id="track_<%= track.id %>" class="<%= "waveform" if track.file %>" data-track-url='<%= track.file.url(secure: true) %>' data-request-id='<%= track.requests.first.id %>' data-request-start='' data-request-end=''></div>
+    <div id="track_<%= track.id %>" class="<%= "waveform" if track.file %>" data-track-url='<%= track.file.url(secure: true) %>' data-request-id='<%= track.requests.first.id %>' data-region-start='<%= track.requests.first&.region_start %>' data-region-end='<%= track.requests.first&.region_end %>'></div>
     <div id="wave_timeline_track_<%= track.id %>"></div>
   </div>
 

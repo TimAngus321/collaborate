@@ -7,6 +7,7 @@
   padding: 0px 50px;
   color: white;
   margin-top: 25px;
+  // experminatal below
 }
 .footer-links {
   display: flex;
@@ -24,4 +25,7 @@
 }
 .footer .fa-heart {
   color: #D23333;
+}
+.min-height {
+  min-height: calc(100vh - 196px)
 }

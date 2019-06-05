@@ -1,4 +1,4 @@
-<div class="submission-card-hull <%= !submission.nil? && submission.selected ? 'submission-card-hull-accepted' : 'submission-card-hull-rejected' %>">
+<div class="submission-card-hull <%= !submission.nil? && submission.selected ? 'submission-card-true' : 'submission-card-false' %>">
     <div class="submission-card-header">
       <h3><%= submission.user.username %></h3>
       <h4><%= submission.name %></h4>
@@ -20,22 +20,10 @@
     </div>
 
 
-    <div class="submission-btn">
-      Accept Submission
-    </div>
-
-  </div>
-
-
-
-
-<div class="submission-card">
-  <div class="submission-card-header">
-  </div>
-  <div class="submission-card-body">
-
-  </div>
-  <div class="submission-card-footer">
-
-  </div>
+    <% if @request.track.user.id == current_user.id %>
+          <%= link_to 'Accept Collaboration?', accept_submission_path(submission), method: :patch %>
+        <% end %>
 </div>
+
+
+

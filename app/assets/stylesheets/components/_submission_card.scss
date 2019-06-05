@@ -1,14 +1,5 @@
 .submission-card-hull {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 10px;
-  margin-left: 65px;
-  margin-right: 65px;
-  font-family: 'Work Sans', sans-serif;
-}
-
-.submission-card-header {
-   overflow: hidden;
+  overflow: hidden;
   height: 300px;
   background: light-gray;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
@@ -20,7 +11,16 @@
   font-family: 'Work Sans', sans-serif;
 }
 
-.description {
+.submission-card-header {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-left: 65px;
+  margin-right: 65px;
+  font-family: 'Work Sans', sans-serif;
+}
+
+.descripiton {
   display: flex;
   align-items: flex-end;
   padding: 5px;
@@ -42,10 +42,17 @@
   padding: 5px;
 }
 
-.submission-wav-details .btn-light {
-
+.submission-btn {
+  text-align: center;
+  vertical-align: center;
+  background-color: transparent;
+  border-color: black;
+  padding: 5px;
 }
 
+.submission-btn:hover {
+  background-color: #c420c8;
+}
 
 
 

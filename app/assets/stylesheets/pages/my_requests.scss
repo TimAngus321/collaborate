@@ -13,13 +13,17 @@
 
 
 .btn-delete {
+
   align-items: center;
-  margin: 10px 10px 0px 10px;
+  margin: -70px 0px 60px 15px;
   display: block;
+  position: relative;
   font-size: 15px;
   color: #6b478f;
   border: solid 1px #6b478f;
   border-radius: 5px;
   width: 300px;
+  }
+.btn-delete:hover {
+  background-color: #ED1C24;
 }
-

@@ -1,30 +1,14 @@
 .submission-card-hull {
   overflow: hidden;
-  height: 300px;
+  height: 340px;
   background: light-gray;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   border-radius: 5px;
   align-items: center;
-  margin: 15px;
+  margin-bottom: 15px;
   padding: 10px;
   color: black;
   font-family: 'Work Sans', sans-serif;
-}
-
-.submission-card-header {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 10px;
-  margin-left: 65px;
-  margin-right: 65px;
-  font-family: 'Work Sans', sans-serif;
-}
-
-.descripiton {
-  display: flex;
-  align-items: flex-end;
-  padding: 5px;
-  justify-content: space-around;
 }
 
 .submission-wav-details {
@@ -42,35 +26,47 @@
   padding: 5px;
 }
 
-.submission-btn {
-  text-align: center;
-  vertical-align: center;
-  background-color: transparent;
-  border-color: black;
+
+.submission-card-header {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-left: 65px;
+  margin-right: 65px;
+  font-family: 'Work Sans', sans-serif;
+}
+
+.selected-btn {
+  background-color: #C420C8;
+  opacity: 0.7;
+  padding: 10px;
+  width: 200px;
+  height: 50px;
+  border-radius: 5px;
+  border: solid white 1px;
+  color: white;
+  position: relative;
+  left: 425px;
+
+  a {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 3px;
+    line-height: -15px;
+    text-decoration: none;
+    color: white;
+    left: 10px;
+
+  }
+}
+
+.selected-btn:hover {
+  opacity: 1;
+}
+
+.accepted-btn {
+  color: white;
+  background-color: green;
+  margin: 10px;
   padding: 5px;
 }
-
-.submission-btn:hover {
-  background-color: #c420c8;
-}
-
-
-
-// .selected-btn {
-//   color: black;
-//   background-color: #C420C8;
-//   margin: 10px;
-//   opacity: 0.7;
-//   padding: 5px;
-// }
-
-// .selected-btn:hover {
-//   opacity: 1;
-// }
-
-// .accepted-btn {
-//   color: white;
-//   background-color: green;
-//   margin: 10px;
-//   padding: 5px;
-// }

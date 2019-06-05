@@ -1,0 +1,21 @@
+<div class="submission-accepted-card-hull">
+  <div class="submission-card-header">
+    <h3><%= submission.user.username %></h3>
+    <h4><%= submission.name %></h4>
+  </div>
+
+  <div class="submission-card-wav">
+    <div id="submission_<%= submission.id %>" class="<%= 'waveform' if submission.file %>" data-track-url='<%= submission.file.url(secure: true) %>'></div>
+  </div>
+
+  <div class="submission-wav-details">
+    <p><strong>Length:  </strong><%= submission.duration %>s</p>
+    <p><strong>bpm:  </strong><%= submission.bpm %></p>
+    <p><strong>Time Signature:  </strong><%= submission.time_signature %></p>
+    <p><strong>Key:  </strong><%= submission.key %></p>
+  </div>
+
+  <div class="selected-btn">
+    <p><strong>Selected</strong></p>
+  </div>
+</div>

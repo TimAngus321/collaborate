@@ -1,0 +1,5 @@
+meta_product_name: "Collaborate"
+meta_title: "Collaborate - Finish that track today!"
+meta_description: "Collaborate connects you to artists globally with the talent you need to realise your ideal sound."
+meta_image: "cover.png" # should exist in `app/assets/images/`
+twitter_account: "@Collabo21769812"   # required for Twitter Cards

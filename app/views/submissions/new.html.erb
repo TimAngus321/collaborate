@@ -4,7 +4,7 @@
       <%= simple_form_for ([@request, @submission]) do |s| %>
         <%= s.input :description %>
         <%= s.input :name %>
-        <div class="row">
+        <!-- <div class="row">
           <div class="col-6">
             <%= s.input :bpm %>
           </div>
@@ -19,7 +19,7 @@
           <div class="col-6">
             <%= s.input :duration %>
           </div>
-        </div>
+        </div> -->
         <%= s.input :file %>
         <%= s.submit "Collaborate", class: "btn btn-primary"%>
       <% end %>

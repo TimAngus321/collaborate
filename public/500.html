@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>We're sorry, but something went wrong (500)</title>
+  <title>The page you were looking for doesn't exist (500)</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <style>
   .rails-default-error-page {
@@ -13,9 +13,13 @@
   }
 
   .rails-default-error-page div.dialog {
-    width: 95%;
-    max-width: 33em;
+    width: 75%;
+    /*max-width: 33em;*/
     margin: 4em auto 0;
+  }
+
+  .rails-default-error-page div.dialog img{
+    width: 100%;
   }
 
   .rails-default-error-page div.dialog > div {
@@ -50,17 +54,22 @@
     border-top-color: #DADADA;
     color: #666;
     box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
+    /*width: 755px;*/
+    padding: 7px 12% 0;
   }
   </style>
 </head>
 
 <body class="rails-default-error-page">
-  <!-- This file lives in public/500.html -->
+  <!-- This file lives in public/404.html -->
   <div class="dialog">
     <div>
-      <h1>We're sorry, but something went wrong.</h1>
+      <h1>The Collaborate page you were looking for doesn't exist.</h1>
+      <p>You may have mistyped the address or played the wrong note.</p>
     </div>
-    <p>If you are the application owner check the logs for more information.</p>
+    <img src="https://res.cloudinary.com/beartechnologies/image/upload/v1559746785/Screenshot_2019-06-05_at_16.59.28_jcowon.png" alt="">
+    <p><a href="/">click to go go home</a></p>
+
   </div>
 </body>
 </html>

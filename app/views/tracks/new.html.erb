@@ -8,11 +8,14 @@
 
           <div class="tracks-form">
             <%= simple_form_for ([@track]) do |t| %>
-              <%= t.input :name %>
-              <%= t.input :bpm %>
-              <%= t.input :time_signature %>
-              <%= t.input :key %>
-              <%= t.input :duration %>
+              <%= t.input :name, label: "Track Name"%>
+              <label for="bpm">BPM</label>
+              <input type="range" name="track[bpm]" id="track_bpm" value="1" min="1" max="400" onchange="bpm_output.value =track_bpm.value">
+              <output name="bpm_output" id="bpm_output">1</output>
+              <%#= t.input :bpm, as: :range, :onChange => "bpm_output.value =track_bpm.value"%>
+              <%= t.input :time_signature, collection: %w[4/4 2/2 2/4 3/4 6/8] %>
+              <%= t.input :key, collection: %w[A Bb B C C# D Eb E F F# G Ab] %>
+              <%#= t.input :duration %>
               <%= t.association :genre, selected: Genre.first %>
               <%= t.input :file %>
               <%= t.submit "Add a New Track", class: "btn btn-light"%>

@@ -19,18 +19,15 @@ $(document).ready(function() {
       pixelRatio: 1,
       responsive: true,
 
-      regionCreated: function() {
-      },
-
       plugins: [
         CursorPlugin.create({
           showTime: true,
           opacity: 1,
           customShowTimeStyle: {
-              'background-color': '#000',
-              color: '#C420C8',
-              padding: '5px',
-              'font-size': '15px',
+            'background-color': '#000',
+            color: '#C420C8',
+            padding: '5px',
+            'font-size': '15px',
           }
         }),
 
@@ -39,14 +36,19 @@ $(document).ready(function() {
         }),
 
         CursorRegions.create ({
-          loopSelection: true,
+          regions: [
+            {
+              start: track.dataset.regionStart,
+              end: track.dataset.regionEnd,
+              color: 'hsla(400, 100%, 30%, 0.5)'
+            }
+          ],
           dragSelection: {
               slop: 20
           },
         })
       ]
     });
-
     if (track.dataset.trackUrl) {
       wave.load(track.dataset.trackUrl);
     }
@@ -55,32 +57,50 @@ $(document).ready(function() {
       container: `#${track.id}`
     });
 
-    wave.on('region-created', function(region) {
-      console.log('region created!!!!');
+    wave.on('region-update-end', (region) => {
       console.log(region);
-      console.log(region.element.parentElement.parentElement.dataset.requestId)
+      const body = { region_start: region.start, region_end: region.end };
+      console.log(body)
 
-      const token = document.querySelector('meta[name="csrf-token"]').content
-
+      const token = document.querySelector('meta[name="csrf-token"]').content;
       const requestId = region.element.parentElement.parentElement.dataset.requestId;
-      const url = '/request_timecodes/' + requestId
+      const url = '/request_timecodes/' + requestId;
       fetch(url, {
           method: "PUT",
           headers: {
             'X-CSRF-Token': token,
             'Content-Type': 'application/json'
           },
-          body: JSON.stringify({ region_start: region.start, region_end: region.end })
-        })
-          .then(response => response.json())
-          .then((data) => {
-            console.log(data); // Look at local_names.default
-          });
-
+          body: JSON.stringify(body)
       })
+        .then(response => response.json())
+        .then((data) => {
+          console.log(data);
+        });
+    })
       // PATCH REQUEST TO SERVER WITH URL
       // NEEDS TO SEND THE TWO END TIME AND START TIME (FROM REGION OBJECT) IN BODY
-    })
   })
+})
 
+
+
+$(document).ready(function() {
+  const sub_tracks = document.querySelectorAll(".waveform-sub");
+
+  sub_tracks.forEach((track) => {
+    let wave = WaveSurfer.create({
+      container: `#${track.id}`,
+      waveColor: 'black',
+      progressColor: '#C420C8',
+      mediaControls: true,
+      backend: 'MediaElement',
+      pixelRatio: 1,
+      responsive: true,
+    });
+    if (track.dataset.trackUrl) {
+      wave.load(track.dataset.trackUrl);
+    }
+  });
+});
 

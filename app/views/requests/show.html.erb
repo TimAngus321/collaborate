@@ -2,7 +2,9 @@
     <div class="request-show-back">
     <%= link_to "< Back", requests_path, class: "btn btn-back" %>
   </div>
+  <div class="index-cards">
   <%= render 'shared/track', track: @request.track %>
+  </div>
 
   <div class="request-show-header d-flex justify-content-between">
     <div>

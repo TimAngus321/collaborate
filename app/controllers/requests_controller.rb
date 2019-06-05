@@ -29,7 +29,7 @@ class RequestsController < ApplicationController
     @request.track = Track.find(params[:track_id])
     @request.instrument = Instrument.find(params[:request][:instrument_id])
     if @request.save
-      redirect_to requests_path
+      redirect_to request_path(@request)
     else
       render :new
     end
@@ -44,7 +44,7 @@ class RequestsController < ApplicationController
   private
 
   def request_params
-    params.require(:request).permit(:start_second, :end_second, :description, :instrument_id)
+    params.require(:request).permit(:description, :instrument_id)
   end
 
   def submission_params

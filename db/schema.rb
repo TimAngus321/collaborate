@@ -66,7 +66,6 @@ ActiveRecord::Schema.define(version: 2019_06_05_105501) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "file"
-    t.string "genre"
     t.text "soundcloud_url"
     t.bigint "genre_id"
     t.index ["genre_id"], name: "index_tracks_on_genre_id"

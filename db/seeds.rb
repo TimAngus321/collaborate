@@ -237,7 +237,7 @@ puts "#{Instrument.count} Instruments created"
 puts 'Creating Users'
 
 User.create!(
-  username: 'xxx_DatBoi4$0_xxx',
+  username: 'Lead Blimp',
   email: 'geoff.butler@example.com',
   password: '123456',
   first_name: 'Geoff',
@@ -247,7 +247,7 @@ User.create!(
   )
 
 User.create!(
-  username: 'BubbsBunny',
+  username: 'Bubbs Bunny',
   email: 'Erikhammond@example.com',
   password: '123456',
   first_name: 'Erik',
@@ -257,7 +257,7 @@ User.create!(
   )
 
 User.create!(
-  username: 'MusicalMastermind',
+  username: 'Musical Mastermind',
   email: 'AlexanderVoggenhuber@example.com',
   password: '123456',
   first_name: 'Alexander',
@@ -267,7 +267,7 @@ User.create!(
   )
 
 User.create!(
-  username: 'LinkedIn_Park',
+  username: 'LinkedIn Park',
   email: 'Dave.Davidson@example.co.uk',
   password: '123456',
   first_name: 'Dave',
@@ -287,7 +287,7 @@ User.create!(
   )
 
 User.create!(
-  username: 'BerndtDasBrot',
+  username: 'SubtleSounds',
   email: 'BDBrot@example.com',
   password: '123456',
   first_name: 'Berndt',
@@ -307,7 +307,7 @@ User.create!(
   )
 
 User.create!(
-  username: 'Ludwig_van_Beathoven',
+  username: 'Ludwig van Beathoven',
   email: 'HughMungus@example.com.',
   password: '123456',
   first_name: 'Hugh',
@@ -320,7 +320,7 @@ puts "#{User.count} Users created"
 puts 'Creating User Instruments'
 
 UserInstrument.create!(
-  user: User.find_by(username: 'Ludwig_van_Beathoven'),
+  user: User.find_by(username: 'Ludwig van Beathoven'),
   instrument: Instrument.find_by(name: 'Trumpet')
   )
 
@@ -330,7 +330,7 @@ UserInstrument.create!(
   )
 
 UserInstrument.create!(
-  user: User.find_by(username: 'BerndtDasBrot'),
+  user: User.find_by(username: 'SubtleSounds'),
   instrument: Instrument.find_by(name: 'Trumpet')
   )
 
@@ -340,22 +340,22 @@ UserInstrument.create!(
   )
 
 UserInstrument.create!(
-  user: User.find_by(username: 'LinkedIn_Park'),
+  user: User.find_by(username: 'LinkedIn Park'),
   instrument: Instrument.find_by(name: 'French Horn')
   )
 
 UserInstrument.create!(
-  user: User.find_by(username: 'MusicalMastermind'),
+  user: User.find_by(username: 'Musical Mastermind'),
   instrument: Instrument.find_by(name: 'Violin')
   )
 
 UserInstrument.create!(
-  user: User.find_by(username: 'BubbsBunny'),
+  user: User.find_by(username: 'Bubbs Bunny'),
   instrument: Instrument.find_by(name: 'Piano')
   )
 
 UserInstrument.create!(
-  user: User.find_by(username: 'xxx_DatBoi4$0_xxx'),
+  user: User.find_by(username: 'Lead Blimp'),
   instrument: Instrument.find_by(name: 'Piano')
   )
 
@@ -363,13 +363,13 @@ puts "#{UserInstrument.count} User Instruments created"
 puts 'Creating Tracks'
 
 Track.create!(
-  user: User.find_by(username: 'Ludwig_van_Beathoven'),
+  user: User.find_by(username: 'Ludwig van Beathoven'),
   name: 'Symphony No. 10',
   bpm: 75,
   time_signature: '6/12',
   key: 'Abm7',
   duration: 1200,
-  remote_file_url: 'https://res.cloudinary.com/beartechnologies/video/upload/v1559223793/Richard_Wagner_-_Ride_Of_The_Valkyries-GGU1P6lBW6Q_weclof.wav'
+  remote_file_url: 'https://res.cloudinary.com/beartechnologies/video/upload/v1559749242/Parov_Stelar_-_Jimmy_s_Gang_stcavq.mp3'
   )
 
 Track.create!(
@@ -383,7 +383,7 @@ Track.create!(
   )
 
 Track.create!(
-  user: User.find_by(username: 'BerndtDasBrot'),
+  user: User.find_by(username: 'SubtleSounds'),
   name: 'Whole Grain',
   bpm: 90,
   time_signature: '4/4',
@@ -403,18 +403,18 @@ Track.create!(
   )
 
 Track.create!(
-  user: User.find_by(username: 'LinkedIn_Park'),
+  user: User.find_by(username: 'LinkedIn Park'),
   name: 'Number',
   bpm: 125,
   time_signature: '4/4',
   key: 'Cmj',
   duration: 236,
-  remote_file_url: 'https://res.cloudinary.com/beartechnologies/video/upload/v1559225838/Falco_-_Der_Kommissar_Official_Video-8-bgiiTxhzM_kigsqa.wav'
+  remote_file_url: 'https://res.cloudinary.com/beartechnologies/video/upload/v1559749604/George_Gerhwin_-_I_ve_Got_Rhythm_qfarad.mp3'
   )
 
 Track.create!(
-  user: User.find_by(username: 'MusicalMastermind'),
-  name: 'Violin Concerto 4. Op. 57',
+  user: User.find_by(username: 'Musical Mastermind'),
+  name: 'Your Touch',
   bpm: 99,
   time_signature: '6/6',
   key: 'Fbm5',
@@ -423,7 +423,7 @@ Track.create!(
   )
 
 Track.create!(
-  user: User.find_by(username: 'BubbsBunny'),
+  user: User.find_by(username: 'Bubbs Bunny'),
   name: 'Looony Tunes',
   bpm: 375,
   time_signature: '2/2',
@@ -433,81 +433,81 @@ Track.create!(
   )
 
 Track.create!(
-  user: User.find_by(username: 'xxx_DatBoi4$0_xxx'),
-  name: 'my first song',
+  user: User.find_by(username: 'Lead Blimp'),
+  name: 'Life Through A Lens',
   bpm: 100,
   time_signature: '2/2',
   key: 'Fmj',
   duration: 200,
-  remote_file_url: 'https://res.cloudinary.com/beartechnologies/video/upload/v1559226084/Charles_Mingus_-_Moanin-__OSyznVDOY_wirx3d.wav'
+  remote_file_url: 'https://res.cloudinary.com/beartechnologies/video/upload/v1559749450/Rick_and_Morty_-_Evil_Morty_fqbruk.mp3'
   )
 
 puts "#{Track.count} Tracks created"
 puts "Creating Requests"
 
 Request.create!(
-  track: Track.find_by(name: 'my first song'),
+  track: Track.find_by(name: 'Life Through A Lens'),
   instrument: Instrument.find_by(name: 'Bass Guitar'),
-  start_second: 25,
-  end_second: 100,
+  region_start: 25,
+  region_end: 100,
   description: "Smooth as butter. Saxophone and imporv as it was meant to be! However, It's missing something, A Clarinet to accompany the Sax!"
   )
 
 Request.create!(
   track: Track.find_by(name: 'Number'),
   instrument: Instrument.find_by(name: 'Violin'),
-  start_second: 5,
-  end_second: 18,
+  region_start: 100,
+  region_end: 180,
   description: "Would love a piano riff after the refrain! something to add to the 80s drum machine!"
   )
 
-Request.create!(
-  track: Track.find_by(name: 'Our Song'),
-  instrument: Instrument.find_by(name: 'Trumpet'),
-  start_second: 110,
-  end_second: 157,
-  description: "Some French horns High above the ringing trombones on the bridge."
-  )
+# Request.create!(
+#   track: Track.find_by(name: 'Our Song'),
+#   instrument: Instrument.find_by(name: 'Trumpet'),
+#   region_start: 110,
+#   region_end: 157,
+#   description: "Some French horns High above the ringing trombones on the bridge."
+#   )
 
 Request.create!(
   track: Track.find_by(name: 'Symphony No. 10'),
   instrument: Instrument.find_by(name: 'Piano'),
-  start_second: 382,
-  end_second: 555,
+  region_start: 100,
+  region_end: 200,
   description: "Already kinda perfect, perhaps some sublte violin Arpeggios above the first few"
   )
 
 Request.create!(
   track: Track.find_by(name: 'Looony Tunes'),
   instrument: Instrument.find_by(name: 'Piano'),
-  start_second: 12,
-  end_second: 27,
+  region_start: 15,
+  region_end: 25,
   description: "A THICCC trap beat plz. with bouncing high hats and more!"
   )
 
-Request.create!(
-  track: Track.find_by(name: 'Violin Concerto 4. Op. 57'),
-  instrument: Instrument.find_by(name: 'Violin'),
-  start_second: 193,
-  end_second: 222,
-  description: "Just more of the same thing really... :("
-  )
+# Request.create!(
+#   track: Track.find_by(name: 'Your Touch'),
+#   instrument: Instrument.find_by(name: 'Violin'),
+#   region_start: 193,
+#   region_end: 222,
+#   description: "Just more of the same thing really... :("
+#   )
 
-Request.create!(
-  track: Track.find_by(name: 'Whole Grain'),
-  instrument: Instrument.find_by(name: 'Trumpet'),
-  start_second: 22,
-  end_second: 42,
-  description: "A Sick Beat on the Marimas, please."
-  )
+# Request.create!(
+#   track: Track.find_by(name: 'Whole Grain'),
+#   instrument: Instrument.find_by(name: 'Trumpet'),
+#   region_start: 22,
+#   region_end: 42,
+#   description: "A Sick Beat on the Marimas, please."
+#   )
 
-Request.create!(
-  track: Track.find_by(name: 'the silence of sound'),
-  instrument: Instrument.find_by(name: 'Oboe'),
-  start_second: 0,
-  end_second: 200,
-  description: "Some Vocals."
-  )
+# Request.create!(
+#   track: Track.find_by(name: 'the silence of sound'),
+#   instrument: Instrument.find_by(name: 'Oboe'),
+#   region_start: 0,
+#   region_end: 200,
+#   description: "Some Vocals."
+#   )
 
 puts "#{Request.count} Requests created"
 puts "SEEDED!"

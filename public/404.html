@@ -4,7 +4,7 @@
   <title>The page you were looking for doesn't exist (404)</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <style>
-  .rails-default-error-page {
+  .rails-error-page {
     background-color: #EFEFEF;
     color: #2E2F30;
     text-align: center;
@@ -12,17 +12,17 @@
     margin: 0;
   }
 
-  .rails-default-error-page div.dialog {
+  .rails-error-page div.dialog {
     width: 75%;
     /*max-width: 33em;*/
     margin: 4em auto 0;
   }
 
-  .rails-default-error-page div.dialog img{
+  .rails-error-page div.dialog img{
     width: 100%;
   }
 
-  .rails-default-error-page div.dialog > div {
+  .rails-error-page div.dialog > div {
     border: 1px solid #CCC;
     border-right-color: #999;
     border-left-color: #999;
@@ -35,13 +35,13 @@
     box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
   }
 
-  .rails-default-error-page h1 {
+  .rails-error-page h1 {
     font-size: 100%;
     color: #730E15;
     line-height: 1.5em;
   }
 
-  .rails-default-error-page div.dialog > p {
+  .rails-error-page div.dialog > p {
     margin: 0 0 1em;
     padding: 1em;
     background-color: #F7F7F7;
@@ -60,14 +60,14 @@
   </style>
 </head>
 
-<body class="rails-default-error-page">
+<body class="rails-error-page">
   <!-- This file lives in public/404.html -->
   <div class="dialog">
     <div>
       <h1>The Collaborate page you were looking for doesn't exist.</h1>
       <p>You may have mistyped the address or played the wrong note.</p>
     </div>
-    <img src="https://res.cloudinary.com/beartechnologies/image/upload/v1559744984/Screenshot_2019-06-05_at_16.28.22_eyporg.png" alt="">
+    <img src="/images/404.png" alt="404 error">
     <p><a href="/">click to go go home</a></p>
 
   </div>

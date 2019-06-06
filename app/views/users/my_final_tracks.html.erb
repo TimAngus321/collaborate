@@ -4,9 +4,13 @@
   <p>This well help other users find out what you're about!</p>
 
 
-
-<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/632100057&color=%2340096b&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-
+ <% @requests.each do |request| %>
+      <% if request.final_track %>
+        <div class="final_track">
+            <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=<%= request.final_track %>&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+        </div>
+        <% end %>
+      <% end %>
 
 </div>
 

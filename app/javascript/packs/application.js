@@ -78,12 +78,8 @@ $(document).ready(function() {
           console.log(data);
         });
     })
-      // PATCH REQUEST TO SERVER WITH URL
-      // NEEDS TO SEND THE TWO END TIME AND START TIME (FROM REGION OBJECT) IN BODY
   })
 })
-
-
 
 $(document).ready(function() {
   const sub_tracks = document.querySelectorAll(".waveform-sub");
@@ -103,4 +99,5 @@ $(document).ready(function() {
     }
   });
 });
+
 

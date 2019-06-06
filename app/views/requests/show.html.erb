@@ -11,16 +11,14 @@
       <h1>Collaborate with <%= @request.track.user.username %></h1>
       <h4><%= @request.description %></h4>
     </div>
-    <br>
     <div>
       <% if current_user != @request.track.user %>
-        <%= link_to "DOWNLOAD", request_path, class: "btn btn-light" %>
+        <%#= link_to "DOWNLOAD", request_path, class: "btn btn-light" %>
         <%= link_to "UPLOAD", new_request_submission_path(@request), class: "btn btn-light btn-light-2" %>
         <% else %>
         <%= simple_form_for(@request) do |f| %>
         <%= f.input :final_track %>
         <%= f.submit class: "btn btn-light" %>
-
         <% end %>
       <% end %>
     </div>
@@ -45,3 +43,6 @@
     <% end %>
   </div>
 </div>
+
+
+<%= link_to("Download", cl_private_download_url("my_private_image", :jpg, :attachment => true)) %>

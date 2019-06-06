@@ -50,3 +50,16 @@
     border-color: #c420c8;
   }
 }
+
+.slider-group{
+  display: flex;
+  width: 100%;
+  align-content: center;
+  .form-group{
+    width: 100%;
+  }
+  .output{
+    width: 40px;
+    text-align: right;
+  }
+}

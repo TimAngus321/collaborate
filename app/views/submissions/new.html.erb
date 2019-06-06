@@ -2,8 +2,7 @@
   <div class="tracks-form">
   <h1>Post a track to collaborate with <%= @request.track.user.username %></h1>
       <%= simple_form_for ([@request, @submission]) do |s| %>
-        <%= s.input :description %>
-        <%= s.input :name %>
+        <%= s.input :name, label: 'Small Description'%>
         <!-- <div class="row">
           <div class="col-6">
             <%= s.input :bpm %>

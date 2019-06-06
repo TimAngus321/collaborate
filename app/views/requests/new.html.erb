@@ -1,13 +1,13 @@
 <div class="container">
   <div class="request-new-title">
-    <h1>Congratulations <%= current_user.username %>! You've added <%= @track.name %>! Now create a request!</h1>
+    <h1>Congratulations you've added a track! Now create a request!</h1>
   </div>
 
   <div class="tracks-form">
     <%= simple_form_for ([@track, @request]) do |r| %>
       <%= r.input :description %>
       <%= r.collection_select :instrument_id, Instrument.all, :id, :name %>
-      <%= r.submit "Add a Collab Request", class: "btn btn-primary"%>
+      <%= r.submit "Save request", class: "btn btn-primary"%>
     <% end %>
   </div>
 </div>

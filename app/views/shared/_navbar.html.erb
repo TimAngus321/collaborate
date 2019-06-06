@@ -23,10 +23,10 @@
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
         <li class="nav-item active">
-          <%= link_to "Find a Collaborator", requests_path, class: "navbar-actions" %>
+          <%= link_to "See all Tracks", requests_path, class: "navbar-actions" %>
         </li>
         <li>
-          <%= link_to "Collaborate", new_track_path(@track_id), class: "btn btn-light" %>
+          <%= link_to "Request Collaboration", new_track_path(@track_id), class: "btn btn-light" %>
         </li>
 
 

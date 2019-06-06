@@ -14,13 +14,12 @@
     <div id="wave_timeline_track_<%= submission.id %>"></div>
   </div>
 
-
+   <div class="selected-btn">
     <% if submission.request.track.user.id == current_user.id %>
-      <div class="selected-btn">
-        <%= link_to 'Accept Collaboration?', accept_submission_path(submission), method: :patch %>
-      </div>
+    <%= link_to 'Accept Collaboration?', accept_submission_path(submission), method: :patch %>
     <% end %>
-
+  </div>
+  
 </div>
 
 

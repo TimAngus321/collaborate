@@ -44,7 +44,7 @@ $(document).ready(function() {
             }
           ],
           dragSelection: {
-              slop: 20
+              slop: 5
           },
         })
       ]
@@ -52,7 +52,6 @@ $(document).ready(function() {
     if (track.dataset.trackUrl) {
       wave.load(track.dataset.trackUrl);
     }
-    // document.querySelectorAll(track)
     wave.getCurrentTime({
       container: `#${track.id}`
     });

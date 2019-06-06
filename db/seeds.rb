@@ -248,7 +248,7 @@ User.create!(
 
 User.create!(
   username: 'Bubbs Bunny',
-  email: 'Erikhammond@example.com',
+  email: 'erikhammond@example.com',
   password: '123456',
   first_name: 'Erik',
   last_name: 'Hammond',
@@ -258,7 +258,7 @@ User.create!(
 
 User.create!(
   username: 'Musical Mastermind',
-  email: 'AlexanderVoggenhuber@example.com',
+  email: 'alexandervoggenhuber@example.com',
   password: '123456',
   first_name: 'Alexander',
   last_name: 'Voggenhuber',
@@ -268,7 +268,7 @@ User.create!(
 
 User.create!(
   username: 'LinkedIn Park',
-  email: 'Dave.Davidson@example.co.uk',
+  email: 'dave.davidson@example.co.uk',
   password: '123456',
   first_name: 'Dave',
   last_name: 'Davidson',
@@ -278,7 +278,7 @@ User.create!(
 
 User.create!(
   username: 'Tovarish_Tunes',
-  email: '123Vassili@example.ru',
+  email: '123vassili@example.ru',
   password: '123456',
   first_name: 'Vassili',
   last_name: 'Antonov',
@@ -288,7 +288,7 @@ User.create!(
 
 User.create!(
   username: 'SubtleSounds',
-  email: 'BDBrot@example.com',
+  email: 'bdbrot@example.com',
   password: '123456',
   first_name: 'Berndt',
   last_name: 'Oettinger',
@@ -308,7 +308,7 @@ User.create!(
 
 User.create!(
   username: 'Ludwig van Beathoven',
-  email: 'HughMungus@example.com.',
+  email: 'hughmungus@example.com',
   password: '123456',
   first_name: 'Hugh',
   last_name: 'Mungus',

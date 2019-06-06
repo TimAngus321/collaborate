@@ -4,7 +4,9 @@
   </div>
   <% @requests.each do |request| %>
     <p class="description">Description: <%= request.description %></p>
+  <%= link_to request_path(request) do %>
     <%= render 'shared/track', track: request.track %>
+    <% end %>
     <%= link_to 'Delete request', request_path(request), method: :delete, data: { confirm: "Are you sure you want to Delete your request?" }, class: "btn btn-delete" %>
   <% end %>
 </div>

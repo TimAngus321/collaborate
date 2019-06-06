@@ -59,8 +59,30 @@
   }
 }
 
-.selected-btn:hover {
-  opacity: 1;
+.submission-card-false {
+  overflow: hidden;
+  background: darkgray;
+  box-shadow: 0 0 25px rgba(0,0,0,0.5);
+  border-radius: 5px;
+  align-items: center;
+  margin-bottom: 30px;
+  padding: 10px;
+  color: black;
+  font-family: 'Work Sans', sans-serif;
+
+}
+
+.submission-card-true {
+  overflow: hidden;
+  height: 340px;
+  background: light-gray;
+  box-shadow: 0 0 25px rgba(218, 165, 32, 0.8);
+  border-radius: 5px;
+  align-items: center;
+  margin: 15px;
+  padding: 10px;
+  color: black;
+  font-family: 'Work Sans', sans-serif;
 }
 
 .accepted-btn {
@@ -68,4 +90,7 @@
   background-color: green;
   margin: 10px;
   padding: 5px;
+  opacity: 0.7;
 }
+
+

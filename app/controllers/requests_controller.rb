@@ -35,6 +35,16 @@ class RequestsController < ApplicationController
     end
   end
 
+  def update
+    @request = Request.find(params[:id])
+    if @request.update(request_params)
+      redirect_to request_path(@request)
+    else
+      render :show
+    end
+  end
+
+
   def destroy
     @request = Request.find(params[:id])
     @request.destroy
@@ -44,7 +54,7 @@ class RequestsController < ApplicationController
   private
 
   def request_params
-    params.require(:request).permit(:description, :instrument_id)
+    params.require(:request).permit(:description, :instrument_id, :final_track)
   end
 
   def submission_params

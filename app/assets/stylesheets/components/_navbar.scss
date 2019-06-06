@@ -19,24 +19,23 @@
 .navbar-actions {
   color: #ede8e8;
   font-weight: bold;
+  font-size: 20px;
   font-family: 'Audiowide', cursive;
   margin: 10px;
-  text-decoration: none;
   text-align: center;
-
 }
+
 .navbar-actions:hover {
   color: #C420C8;
   transition: 0.2s;
+  text-decoration: none;
 }
-
 
 
 .navbar-link:hover {
   text-decoration: none;
   font-family: 'Audiowide', cursive;
 }
-
 
 
 #navbarDropdown {

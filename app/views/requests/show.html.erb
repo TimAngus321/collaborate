@@ -15,9 +15,21 @@
     <div>
       <% if current_user != @request.track.user %>
         <%= link_to "DOWNLOAD", request_path, class: "btn btn-light" %>
+        <%= link_to "UPLOAD", new_request_submission_path(@request), class: "btn btn-light btn-light-2" %>
+        <% else %>
+        <%= simple_form_for(@request) do |f| %>
+        <%= f.input :final_track %>
+        <%= f.submit class: "btn btn-light" %>
+
+        <% end %>
       <% end %>
-    <%= link_to "UPLOAD", new_request_submission_path(@request), class: "btn btn-light btn-light-2" %>
     </div>
+
+    <% if @request.final_track %>
+      <div class="final_track">
+          <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=<%= @request.final_track %>&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+      </div>
+      <% end %>
   </div>
 
   <div class="request-show-submissions">

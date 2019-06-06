@@ -12,9 +12,7 @@
 }
 
 .selected-btn {
-  opacity: 0;
+  visibility: hidden;
 }
 
-.selected-btn:hover {
-  opacity: 0;
-}
+

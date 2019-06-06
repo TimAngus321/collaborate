@@ -9,6 +9,6 @@ class Track < ApplicationRecord
   validates :bpm, presence: true
   validates :time_signature, presence: true
   validates :key, presence: true
-  validates :duration, presence: true
+  # validates :duration, presence: true
   validates :file, presence: true
 end

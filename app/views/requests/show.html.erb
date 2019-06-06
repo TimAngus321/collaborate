@@ -13,7 +13,9 @@
     </div>
     <br>
     <div>
-    <%= link_to "DOWNLOAD", request_path, class: "btn btn-light" %>
+      <% if current_user != @request.track.user %>
+        <%= link_to "DOWNLOAD", request_path, class: "btn btn-light" %>
+      <% end %>
     <%= link_to "UPLOAD", new_request_submission_path(@request), class: "btn btn-light btn-light-2" %>
     </div>
   </div>

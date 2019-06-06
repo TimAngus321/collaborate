@@ -1,8 +1,15 @@
 <div class="container">
   <div class="tracks-form">
-  <h1>Post a track to collaborate with <%= @request.track.user.username %></h1>
+  <h1>Submit your part</h1>
+  <h2 style="font-size: 19px !important">
+    To collaborate with
+    <%= @request.track.user.username %>
+    on
+    <%= @request.track.name %>
+  </h2>
+      <p class="mt-4"></p>
       <%= simple_form_for ([@request, @submission]) do |s| %>
-        <%= s.input :name, label: 'Small Description'%>
+        <%= s.input :name, label: 'Short description of your collaboration'%>
         <!-- <div class="row">
           <div class="col-6">
             <%= s.input :bpm %>

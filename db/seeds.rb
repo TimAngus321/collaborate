@@ -247,7 +247,7 @@ User.create!(
   )
 
 User.create!(
-  username: 'Bubbs Bunny',
+  username: "Alex'sSounds",
   email: 'erikhammond@example.com',
   password: '123456',
   first_name: 'Erik',
@@ -297,7 +297,7 @@ User.create!(
   )
 
 User.create!(
-  username: 'Mr_Traumatic',
+  username: 'Steve',
   email: 'welshboy@example.com',
   password: '123456',
   first_name: 'Simon',
@@ -325,7 +325,7 @@ UserInstrument.create!(
   )
 
 UserInstrument.create!(
-  user: User.find_by(username: 'Mr_Traumatic'),
+  user: User.find_by(username: 'Steve'),
   instrument: Instrument.find_by(name: 'Oboe')
   )
 
@@ -350,7 +350,7 @@ UserInstrument.create!(
   )
 
 UserInstrument.create!(
-  user: User.find_by(username: 'Bubbs Bunny'),
+  user: User.find_by(username: "Alex'sSounds"),
   instrument: Instrument.find_by(name: 'Piano')
   )
 
@@ -373,7 +373,7 @@ Track.create!(
   )
 
 Track.create!(
-  user: User.find_by(username: 'Mr_Traumatic'),
+  user: User.find_by(username: 'Steve'),
   name: 'the silence of sound',
   bpm: 100,
   time_signature: '4/4',
@@ -423,7 +423,7 @@ Track.create!(
   )
 
 Track.create!(
-  user: User.find_by(username: 'Bubbs Bunny'),
+  user: User.find_by(username: "Alex'sSounds"),
   name: 'Looony Tunes',
   bpm: 375,
   time_signature: '2/2',

@@ -12,7 +12,7 @@ class UsersController < ApplicationController
   end
 
   def my_final_tracks
-    @final_tracks = current_user.tracks
+    @requests = current_user.requests
   end
 
   def update

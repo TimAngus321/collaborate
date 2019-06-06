@@ -1,13 +1,18 @@
 <div class="container">
-  <div class="request-new-title">
-    <h1>Congratulations you've added a track! Now create a request!</h1>
+  <div class="request-new-title text-center">
+    <h1>Congratulations you've added a track!</h1>
+    <h2>Now create a request!</h2>
   </div>
 
   <div class="tracks-form">
     <%= simple_form_for ([@track, @request]) do |r| %>
       <%= r.input :description %>
-      <%= r.collection_select :instrument_id, Instrument.all, :id, :name %>
-      <%= r.submit "Save request", class: "btn btn-primary"%>
+      <%= r.association :instrument,
+                        label: "Which instrument do you need?",
+                        required: false,
+                        selected: Instrument.first %>
+      <%= r.submit "Submit your request",
+                   class: "btn btn-primary my-4" %>
     <% end %>
   </div>
 </div>

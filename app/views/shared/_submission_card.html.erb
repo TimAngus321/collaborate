@@ -20,8 +20,7 @@
       </div>
     <% elsif submission.request.track.user.id == current_user.id && submission.request.submissions.where(selected: true).any? && submission.selected? %>
       <div class="accepted-text">
-        <p>Accepted</p>
-        <%= submission.user.email %>
+        <p>You accepted this submission. Email <%= submission.user.email %> if you want to discuss further.</p>
       </div>
     <% elsif submission.request.track.user.id == current_user.id && submission.request.submissions.where(selected: true).any? && !submission.selected? %>
       <div class="not-accepted-text">

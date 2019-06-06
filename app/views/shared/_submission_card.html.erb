@@ -17,6 +17,7 @@
 
     <% if submission.request.track.user.id == current_user.id %>
     <%= link_to 'Accept Collaboration?', accept_submission_path(submission), method: :patch %>
+    <% elsif submission.request.track.user.id == !current_user.id %>
     <% end %>
   </div>
 

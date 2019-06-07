@@ -19,11 +19,15 @@
   display: block;
   position: relative;
   font-size: 15px;
-  color: #6b478f;
+  color: #fff;
   border: solid 1px #6b478f;
   border-radius: 5px;
   width: 300px;
+  background-color: #343a40;
+  border-color: #343a40;
   }
 .btn-delete:hover {
-  background-color: #ED1C24;
+  color: #fff;
+  background-color: #23272b;
+  border-color: #1d2124;
 }

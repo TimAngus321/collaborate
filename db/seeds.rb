@@ -141,6 +141,10 @@ Instrument.create!(
   )
 
 Instrument.create!(
+  name: 'Drums'
+  )
+
+Instrument.create!(
   name: 'Flute'
   )
 

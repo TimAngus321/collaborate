@@ -9,17 +9,17 @@
             <%= t.input :name, label: "Track Name"%>
             <!-- <input type="range" name="track[bpm]" id="track_bpm" value="1" min="1" max="400" onchange="bpm_output.value =track_bpm.value"> -->
             <div class="slider-group">
-              <%= t.input :bpm, as: :range, input_html: { :onChange => "bpm_output.value =track_bpm.value", max: 400, min: 1, width: '100%' } %>
+              <%= t.input :bpm, as: :range, input_html: { :onChange => "bpm_output.value =track_bpm.value", max: 400, min: 1, width: '100%' }%>
               <div class="output">
                 <output name="bpm_output" id="bpm_output">1</output>
               </div>
             </div>
             <div class="row">
               <div class="col-6">
-               <%= t.input :time_signature, collection: %w[4/4 2/2 2/4 3/4 6/8] %>
+               <%= t.input :time_signature %>
              </div>
              <div class="col-6">
-               <%= t.input :key, collection: %w[A Bb B C C# D Eb E F F# G Ab] %>
+               <%= t.input :key, collection: %w[C D Db E Eb F G Gb A Ab B Bb]%>
              </div>
             </div>
             <%#= t.input :duration %>

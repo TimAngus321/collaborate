@@ -1,12 +1,14 @@
 <div class="container">
-  <h1>My Submissions to Collaboration Requests </h1>
-  <% @submissions.each do |submission| %>
-    <h2>Your submission on <%= submission.request.track.user.username %>'s request</h2>
-    <p>Description: <%= submission.description %></p>
-    <%= link_to request_path(submission.request) do %>
-    <%= render 'shared/submission_card', submission: submission %>
-    <% end %>
-    <%= link_to 'Delete Submission', submission_path(submission), method: :delete, data: { confirm: "Are you sure you want to Delete your submission?" }, class: "btn btn-dark" %>
+  <h1 class="my-submissions-card-header">My Submissions to Collaboration Requests </h1>
+  <div class="card-white-space">
+    <% @submissions.each do |submission| %>
+      <h2 class="my-submissions-sub-header">Your submission on <%= submission.request.track.user.username %>'s request</h2>
+      <p>Description: <%= submission.description %></p>
+      <%= link_to request_path(submission.request) do %>
+      <%= render 'shared/submission_card', submission: submission %>
+      <% end %>
+      <%= link_to 'Delete Submission', submission_path(submission), method: :delete, data: { confirm: "Are you sure you want to Delete your submission?" }, class: "btn btn-dark" %>
+    </div>
   <% end %>
 </div>
 

@@ -1,12 +1,12 @@
 <div class="container">
-  <h1>Hello <%= current_user.first_name %></h1>
-  <h2>Finished a track? Get it off soundcloud and post it here!</h2>
-  <p>This well help other users find out what you're about!</p>
+  <h1 class="final-track-header">Hello <%= current_user.first_name %> here are all your completed tracks:</h1>
+  <h2 class="final-track-sub-header">Now other users can find out what you're about!</h2>
+
 
 
  <% @requests.each do |request| %>
       <% if request.final_track %>
-        <div class="final_track">
+        <div class="final-track">
             <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=<%= request.final_track %>&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
         </div>
         <% end %>

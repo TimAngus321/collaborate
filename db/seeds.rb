@@ -261,16 +261,6 @@ User.create!(
   )
 
 User.create!(
-  username: 'Musical Mastermind',
-  email: 'alexandervoggenhuber@example.com',
-  password: '123456',
-  first_name: 'Alexander',
-  last_name: 'Voggenhuber',
-  biography: 'Pop culture geek. Food advocate. Freelance tv fanatic. Extreme alcohol aficionado. Explorer. Wannabe bacon specialist.',
-  facebook_url: ''
-  )
-
-User.create!(
   username: 'LinkedIn Park',
   email: 'dave.davidson@example.co.uk',
   password: '123456',
@@ -287,7 +277,8 @@ User.create!(
   first_name: 'Vassili',
   last_name: 'Antonov',
   biography: 'Tv evangelist. Friendly travel ninja. Writer. Avid troublemaker. Organizer.',
-  facebook_url: ''
+  facebook_url: '',
+  photo: "http://res.cloudinary.com/beartechnologies/image/upload/c_fill,h_300,w_400/vkiwqncnxmnbsrhw32ye.jpg"
   )
 
 User.create!(
@@ -346,11 +337,6 @@ UserInstrument.create!(
 UserInstrument.create!(
   user: User.find_by(username: 'LinkedIn Park'),
   instrument: Instrument.find_by(name: 'French Horn')
-  )
-
-UserInstrument.create!(
-  user: User.find_by(username: 'Musical Mastermind'),
-  instrument: Instrument.find_by(name: 'Violin')
   )
 
 UserInstrument.create!(
@@ -414,16 +400,6 @@ Track.create!(
   key: 'Cmj',
   duration: 236,
   remote_file_url: 'https://res.cloudinary.com/beartechnologies/video/upload/v1559749604/George_Gerhwin_-_I_ve_Got_Rhythm_qfarad.mp3'
-  )
-
-Track.create!(
-  user: User.find_by(username: 'Musical Mastermind'),
-  name: 'Your Touch',
-  bpm: 99,
-  time_signature: '6/6',
-  key: 'Fbm5',
-  duration: 1674,
-  remote_file_url: 'https://res.cloudinary.com/beartechnologies/video/upload/v1559225617/Queen_-_Bohemian_Rhapsody_Official_Video-fJ9rUzIMcZQ_s0gxao.wav'
   )
 
 Track.create!(

@@ -15,7 +15,11 @@
               <%= f.input :instruments, as: :select, collection: Instrument.all, input_html: { multiple: true } %>
               <%= f.input :genres, as: :select, collection: Genre.all, input_html:
                   { multiple: true } %>
-              <%= f.submit "Save", class: "btn btn-light" %>
+              <%= f.input :photo %>
+              <%= f.input :photo_cache, as: :hidden %>
+              <%= f.submit "Save",
+                          class: "btn btn-light",
+                          data: { disable_with: "Uploading..." } %>
             <% end %>
           </div>
         </div>

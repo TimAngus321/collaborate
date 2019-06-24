@@ -17,7 +17,6 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
-
     instruments = Instrument.where(id: params[:user][:instruments])
     @user.instruments = instruments
     genres = Genre.where(id: params[:user][:genres])
@@ -33,6 +32,6 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:username, :first_name, :last_name, :biography, :instruments, :genres)
+    params.require(:user).permit(:username, :first_name, :last_name, :biography, :instruments, :genres, :photo)
   end
 end

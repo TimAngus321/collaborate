@@ -29,11 +29,13 @@
 .submission-card-header {
   display: flex;
   justify-content: space-between;
-  margin-top: 10px;
-  margin-left: 65px;
-  margin-right: 65px;
   font-family: 'Work Sans', sans-serif;
+  padding: 5px;
+    h4, h3, p {
+      margin: 20px;
+    }
 }
+
 
 .selected-btn {
   background-color: #C420C8;

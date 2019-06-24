@@ -1,5 +1,5 @@
 class RequestsController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:index ]
+  skip_before_action :authenticate_user!, only: [:index]
 
   def index
     @requests = Request.all
@@ -43,7 +43,6 @@ class RequestsController < ApplicationController
       render :show
     end
   end
-
 
   def destroy
     @request = Request.find(params[:id])

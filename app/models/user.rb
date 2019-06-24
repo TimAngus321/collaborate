@@ -3,6 +3,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+  mount_uploader :photo, PhotoUploader
   has_many :tracks
   has_many :user_instruments
   has_many :instruments, through: :user_instruments
@@ -11,5 +12,4 @@ class User < ApplicationRecord
   has_many :user_genres
   has_many :genres, through: :user_genres
   has_many :final_tracks
-  mount_uploader :photo, PhotoUploader
 end

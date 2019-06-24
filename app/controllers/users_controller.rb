@@ -17,7 +17,6 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
-
     instruments = Instrument.where(id: params[:user][:instruments])
     @user.instruments = instruments
     genres = Genre.where(id: params[:user][:genres])

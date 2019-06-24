@@ -4,7 +4,11 @@
   <h2>First name </h2><p><%= @user.first_name %></p>
   <h2>Last name </h2><p><%= @user.last_name %></p>
     <h2>Photo</h2>
+    <% if @user.photo == nil %>
+    <img src="https://s1.dmcdn.net/OKX3b/x1080-bAE.jpg" alt="Bear-cave">
+    <% else %>
     <%= cl_image_tag @user.photo, height: 300, width: 400, crop: :fill %>
+    <% end %>
   <h2>Bio </h2><p><%= @user.biography %></p>
     <h2>Instrument skills </h2><p><% @user.instruments.each do |instrument| %>
     <%= instrument.name %>

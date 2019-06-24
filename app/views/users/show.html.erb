@@ -3,13 +3,14 @@
   <h2>Username </h2><p><%= @user.username %></p>
   <h2>First name </h2><p><%= @user.first_name %></p>
   <h2>Last name </h2><p><%= @user.last_name %></p>
+    <h2>Photo</h2>
+    <%= cl_image_tag @user.photo, height: 300, width: 400, crop: :fill %>
   <h2>Bio </h2><p><%= @user.biography %></p>
     <h2>Instrument skills </h2><p><% @user.instruments.each do |instrument| %>
     <%= instrument.name %>
     <% end %></p>
     <h2> Genres </h2><p><% @user.genres.each do |genre| %>
     <%= genre.name %>
-    <%= cl_image_tag @user.photo, height: 300, width: 400, crop: :fill %>
     <% end %></p>
     <%= link_to 'Edit my profile', edit_user_path(current_user), class: "btn btn-dark" %>
 </div>

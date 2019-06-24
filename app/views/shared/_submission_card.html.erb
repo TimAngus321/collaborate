@@ -2,10 +2,10 @@
 <div class="submission-card-<%= !submission.nil? && submission.selected ? 'true' : 'false' %>">
     <div class="submission-card-header">
       <div>
-        <h4>Artist:</h4> <h3><%= submission.user.username %></h3>
+        <h4 >Artist:</h4> <h3><%= submission.user.username %></h3>
       </div>
       <div>
-        <h4>Description:</h4> <h3><%= submission.name %></h3>
+        <h4 >Description:</h4> <p><%= submission.description %></p>
       </div>
     </div>
 

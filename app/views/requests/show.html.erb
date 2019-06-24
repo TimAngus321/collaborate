@@ -1,6 +1,6 @@
 <div class="container" id="request-show-container">
     <div class="request-show-back">
-    <%= link_to "< Back", requests_path, class: "btn btn-back" %>
+    <%= link_to "Back", requests_path, class: "btn btn-back" %>
   </div>
   <div class="index-cards">
   <%= render 'shared/track', track: @request.track %>
@@ -35,10 +35,20 @@
   <div class="request-show-submissions">
     <div class="request-show-submissions-header">
       <h2>Submissions</h2>
-      <h4><%= @request.description %></h4>
-      <h4><%= @request.instrument.name %></h4>
+      <br>
+      <% if current_user != @request.track.user %>
+      <h4>If you would like to submit a collaboration request remember to follow these steps:</h4>
+        <br>
+        <ul>
+          <li><h4>Listen to the track</h4></li>
+          <li><h4>Read the description</h4></li>
+          <li><h4>Use the correct insrument</h4></li>
+          <li><h4>Record at the same bpm, key and time signature</h4></li>
+          <li><h4>Remember to always start recording from 0! </h4></li>
+        </ul>
       <br>
       <br>
+      <% end %>
     </div>
     <% @request.submissions.each do |submission|  %>
       <%= render 'shared/submission_card', submission: submission %>

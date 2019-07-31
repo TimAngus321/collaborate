@@ -11,7 +11,7 @@
     "malihu-custom-scrollbar-plugin": "^3.1.5",
     "popper.js": "^1.15.0",
     "wavesurfer.js": "^2.2.1",
-    "yarn": "^1.16.0"
+    "yarn": "^1.17.3"
   },
   "devDependencies": {
     "webpack-dev-server": "^3.4.1"

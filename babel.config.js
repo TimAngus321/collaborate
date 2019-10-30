@@ -30,9 +30,15 @@ module.exports = function(api) {
         {
           forceAllTransforms: true,
           useBuiltIns: 'entry',
-          corejs: '3.0.0',
           modules: false,
           exclude: ['transform-typeof-symbol']
+        }
+      ],
+      [
+        require('@babel/preset-react').default,
+        {
+          development: isDevelopmentEnv || isTestEnv,
+          useBuiltIns: true
         }
       ]
     ].filter(Boolean),
@@ -64,6 +70,12 @@ module.exports = function(api) {
         require('@babel/plugin-transform-regenerator').default,
         {
           async: false
+        }
+      ],
+      isProductionEnv && [
+        require('babel-plugin-transform-react-remove-prop-types').default,
+        {
+          removeImport: true
         }
       ]
     ].filter(Boolean)

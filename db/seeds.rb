@@ -13,7 +13,13 @@ Instrument.destroy_all
 UserGenre.destroy_all
 Genre.destroy_all
 User.destroy_all
+Message.destroy_all
+User.destroy_all
+Channel.destroy_all
 
+ActiveRecord::Base.connection.tables.each do |t|
+  ActiveRecord::Base.connection.reset_pk_sequence!(t)
+end
 
 puts 'Creating genres!'
 
@@ -488,6 +494,26 @@ Request.create!(
 #   region_end: 200,
 #   description: "Some Vocals."
 #   )
+
+names = %w(general music collaborations)
+nicknames = %w(Timothy Peter Fabio Slash)
+
+channels = names.map do |name|
+  Channel.find_or_create_by(name: name)
+end
+
+users = nicknames.map do |nickname|
+  User.create(email: "#{nickname.downcase}@example.com", nickname: nickname, password: "testtest")
+end
+
+20.times do
+  Message.create! user: users.sample, channel: channels.sample, content: Faker::HowIMetYourMother.quote
+end
+
+puts 'Channels:'
+channels.each do |channel|
+  puts "- #{channel.id}: #{channel.name}"
+end
 
 puts "#{Request.count} Requests created"
 puts "SEEDED!"

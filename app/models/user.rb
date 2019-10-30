@@ -12,4 +12,5 @@ class User < ApplicationRecord
   has_many :user_genres
   has_many :genres, through: :user_genres
   has_many :final_tracks
+  has_many :messages
 end

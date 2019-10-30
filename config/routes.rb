@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   get '/wikihow', to: 'pages#wikihow'
   get '/my_final_tracks', to: 'users#my_final_tracks'
+  get '/chat', to: 'users#chat'
 
 
   resources :users, only: [:edit, :update, :show, :index]

@@ -1,9 +1,23 @@
 Rails.application.routes.draw do
   devise_for :users, controllers: { registrations: "registrations" }
+
   root to: 'pages#home'
   get '/wikihow', to: 'pages#wikihow'
   get '/my_final_tracks', to: 'users#my_final_tracks'
-  get '/chat', to: 'users#chat'
+
+
+  #Routes for react chat feature - Delete if I fuck up
+  namespace :api, defaults: { format: :json } do
+  namespace :v1 do
+    resources :channels, only: [] do
+      resources :messages, only: [ :index, :create ]
+    end
+  end
+end
+
+resources :channels, only: [ :show ]
+get "channel/show", to: 'channels#show'
+
 
 
   resources :users, only: [:edit, :update, :show, :index]

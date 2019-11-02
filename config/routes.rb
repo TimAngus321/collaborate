@@ -18,6 +18,7 @@ end
 resources :channels, only: [ :show ]
 get "channel/show", to: 'channels#show'
 
+mount ActionCable.server => '/cable'
 
 
   resources :users, only: [:edit, :update, :show, :index]

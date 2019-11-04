@@ -5,8 +5,6 @@ import MessageList from '../containers/message_list';
 const App = (props) => {
   return (
     <div className="messaging-wrapper">
-      <div className="logo-container">
-      </div>
       <ChannelList selectedChannel={props.match.params.channel} />
       <MessageList selectedChannel={props.match.params.channel} />
     </div>

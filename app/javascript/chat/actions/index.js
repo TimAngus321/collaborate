@@ -1,5 +1,9 @@
 const BASE_URL = '/api/v1';
 
+// export const FETCH_MESSAGES = 'FETCH_MESSAGES';
+// export const MESSAGE_POSTED = 'MESSAGE_POSTED';
+// export const CHANNEL_SELECTED = 'CHANNEL_SELECTED';
+
 export function fetchMessages(channel) {
   const url = `${BASE_URL}/channels/${channel}/messages`;
   const promise = fetch(url, { credentials: "same-origin" }).then(r => r.json());
@@ -34,7 +38,7 @@ export function createMessage(channel, content) {
 export function selectChannel(channel) {
   return {
     type: 'CHANNEL_SELECTED',
-    payload: channel
+    // payload: channel
   }
 }
 

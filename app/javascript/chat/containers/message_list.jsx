@@ -7,7 +7,7 @@ import Message from '../components/message';
 import MessageForm from '../containers/message_form';
 
 class MessageList extends Component {
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     this.fetchMessages();
   }
 
@@ -15,7 +15,7 @@ class MessageList extends Component {
     this.subscribeActionCable(this.props);
   }
 
-  componentWillReceiveProps(nextProps) { // For after switching channels
+  UNSAFE_componentWillReceiveProps(nextProps) { // For after switching channels
     if (this.props.selectedChannel != nextProps.selectedChannel) {
       this.subscribeActionCable(nextProps);
     }

@@ -28,5 +28,11 @@
   },
   "devDependencies": {
     "webpack-dev-server": "^3.4.1"
-  }
+  },
+  "version": "1",
+  "description": "Music Matchmaker and Versioning Tool",
+  "main": "index.js",
+  "repository": "git@github.com:PeterGillis/collaborate.git",
+  "author": "Timothy Angus <timangus321@gmail.com>",
+  "license": "MIT"
 }

@@ -468,7 +468,7 @@ Request.create!(
   instrument: Instrument.find_by(name: 'Piano'),
   region_start: 15,
   region_end: 25,
-  description: "A THICCC trap beat plz. with bouncing high hats and more!"
+  description: "A deep trap beat please, with bouncing high hats and more!"
   )
 
 # Request.create!(

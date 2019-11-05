@@ -496,7 +496,7 @@ Request.create!(
 #   )
 
 names = %w(general music collaborations)
-nicknames = %w(Timothy Peter Fabio Slash)
+nicknames = %w(Timothy Peter Fabio Slash Bob)
 
 channels = names.map do |name|
   Channel.find_or_create_by(name: name)

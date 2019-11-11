@@ -18,7 +18,6 @@ end
 resources :channels, only: [ :show ]
 get "channel/show", to: 'channels#show'
 
-mount ActionCable.server => '/cable'
 
 
   resources :users, only: [:edit, :update, :show, :index]
@@ -34,4 +33,6 @@ mount ActionCable.server => '/cable'
   resources :submissions, only: [:show, :index, :edit, :update, :destroy]
   resources :request_timecodes, only: [ :update ]
   patch '/submissions/:id/accept', to: "submissions#accept", as: :accept_submission
+
+  mount ActionCable.server => '/cable'
 end

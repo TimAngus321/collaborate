@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_30_232614) do
+ActiveRecord::Schema.define(version: 2019_10_30_220626) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,8 +19,6 @@ ActiveRecord::Schema.define(version: 2019_10_30_232614) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "message_id"
-    t.index ["message_id"], name: "index_channels_on_message_id"
   end
 
   create_table "genres", force: :cascade do |t|
@@ -83,7 +81,6 @@ ActiveRecord::Schema.define(version: 2019_10_30_232614) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "file"
-    t.string "genre"
     t.text "soundcloud_url"
     t.bigint "genre_id"
     t.index ["genre_id"], name: "index_tracks_on_genre_id"

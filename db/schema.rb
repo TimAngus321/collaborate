@@ -124,6 +124,8 @@ ActiveRecord::Schema.define(version: 2019_10_30_220626) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+
+  add_foreign_key "channels", "messages"
   add_foreign_key "requests", "instruments"
   add_foreign_key "requests", "tracks"
   add_foreign_key "submissions", "requests"

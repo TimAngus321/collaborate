@@ -21,6 +21,7 @@ gem 'pg_search'
 gem 'faker'
 gem "bootstrap-sass"
 
+
 group :development do
   gem 'web-console', '>= 3.3.0'
   gem 'rails_real_favicon'

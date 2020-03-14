@@ -28,7 +28,7 @@
     "serialize-javascript": "^2.1.1",
     "wavesurfer.js": "^2.2.1",
     "webpack": "^4.41.2",
-    "yarn": "^1.17.3"
+    "yarn": "^1.22.0"
   },
   "devDependencies": {
     "webpack-dev-server": "^3.4.1"

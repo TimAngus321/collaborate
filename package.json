@@ -12,7 +12,7 @@
     "choices.js": "^7.0.0",
     "core-js": "3",
     "history": "^4.10.1",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "kind-of": "^6.0.3",
     "malihu-custom-scrollbar-plugin": "^3.1.5",
     "popper.js": "^1.15.0",

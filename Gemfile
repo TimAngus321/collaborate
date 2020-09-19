@@ -23,11 +23,10 @@ gem 'pg_search'
 gem 'faker'
 gem "bootstrap-sass"
 gem "mini_racer"
-gem 'web-console', '>= 3.3.0'
-  gem 'rails_real_favicon'
 
 group :development do
-  
+  gem 'web-console', '>= 3.3.0'
+  gem 'rails_real_favicon'
 end
 
 group :development, :test do

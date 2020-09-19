@@ -82,13 +82,40 @@
 .btn-light {
   color: white;
   background-color: #C420C8;
-  margin-right: 10px;
+  width: 250px;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .home-btn-container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .btn-light {
+    margin: 0 0 15px 0;
+    font-size: 14px;
+    width: 200px;
+    align-self: center;
+  }
 }
 
 .btn-secondary {
   border: solid 2px #ffffff8a;
   background:  transparent;
+  width: 250px;
 }
+
+@media only screen and (max-width: 600px) {
+  .btn-secondary {
+    font-size: 14px;
+    width: 200px;
+    align-self: center;
+  }
+}
+
 
 .dropdown-menu {
   padding: 0px;

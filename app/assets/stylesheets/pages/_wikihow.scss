@@ -7,12 +7,14 @@
   color: white;
 }
 
-// .banner h1 {
-//   margin: 30px;
-// }
-
+@media only screen and (max-width: 600px) {
+  .banner {
+      padding: 20px 0;
+    }
+  }
+  
 .circle-card {
-    width: 300px;
+  max-width: 300px;
   -o-object-fit: cover;
   object-fit: cover;
   margin-bottom: 64px;
@@ -24,13 +26,25 @@
   box-shadow: 1px 1px 21px lightgrey;
 }
 
+@media only screen and (max-width: 991px) {
+  .circle-card {
+    max-width: 600px;
+  }
+}
+
 .circle-card img {
-  height: 166px;
+    max-height: 166px;
     width: 100%;
     -o-object-fit: cover;
     object-fit: cover;
     color: white;
     position: center;
+}
+
+@media only screen and (max-width: 991px) {
+  .circle-card img {
+    max-height: 300px;
+  }
 }
 
 .wiki-heading {
@@ -41,6 +55,15 @@
   display: flex;
   justify-content: space-around;
   color: white;
+}
+
+@media only screen and (max-width: 991px) {
+  .circle-cards {
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .circle-card h3 {

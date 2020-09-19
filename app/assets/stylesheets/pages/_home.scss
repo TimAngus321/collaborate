@@ -1,10 +1,4 @@
 // Specific CSS for your home-page
-.banner {
-  background-size: cover;
-  background-position: center;
-  padding: 150px 0;
-  height: 100vh;
-}
 
 .banner h1 {
     margin: 0;
@@ -17,6 +11,12 @@
     font-family: 'Audiowide', cursive;
 }
 
+@media only screen and (max-width: 600px) {
+  .banner h1{
+    font-size: 40px;
+  }
+}
+
 .banner p {
   font-size: 20px;
   color: white;
@@ -24,4 +24,33 @@
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
   max-width: 600px;
   font-family: 'Nixie One', cursive;
+  margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 991px) {
+  .banner p {
+    font-size: 15px;
+  }
+}
+
+.home-banner-container {
+    padding: 0 100px;
+    margin-right: auto;
+    margin-left: auto;
+} 
+
+@media only screen and (max-width: 900px) { 
+  .home-banner-container {
+    padding: 0 40px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .home-banner-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+  }
 }

@@ -7,11 +7,19 @@
   padding: 0px 50px;
   color: white;
   margin-top: 25px;
-  // experminatal below
+}  
+
+@media only screen and (max-width: 550px) {
+.footer {
+    padding: 0;
+  }
 }
+
+// experminatal below
 .footer-links {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  padding: 0 20px;
 }
 .footer-links a {
   color: white;
@@ -20,6 +28,13 @@
   font-size: 24px;
   padding: 0px 10px;
 }
+
+@media only screen and (max-width: 550px) {
+  .footer-links a {
+    font-size: 20px;
+  }
+}
+
 .footer-links a:hover {
   opacity: 1;
 }
@@ -29,3 +44,40 @@
 .min-height {
   min-height: calc(100vh - 196px)
 }
+
+.footer-copyright {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 20px;
+}
+
+.footer-copyright i {
+  display: flex;
+  align-self: center;
+  padding: 0 10px;
+}
+
+.footer-copyright p {
+  display: flex;
+  align-self: center;
+  margin: 0;
+}
+
+@media only screen and (max-width: 650px) {
+  .footer-copyright p {
+      font-size: 14px;
+      text-align: end;
+    }
+  }
+
+@media only screen and (max-width: 600px) {
+  .footer-copyright p {
+      font-size: 12px;
+    }
+  }
+
+  @media only screen and (max-width: 400px) {
+    .footer-copyright p {
+        font-size: 9px;
+      }
+    }

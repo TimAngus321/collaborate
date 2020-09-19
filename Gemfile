@@ -22,6 +22,7 @@ gem 'carrierwave', '~> 1.2'
 gem 'pg_search'
 gem 'faker'
 gem "bootstrap-sass"
+gem "mini_racer"
 
 group :development do
   gem 'web-console', '>= 3.3.0'

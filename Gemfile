@@ -27,8 +27,6 @@ gem "bootstrap-sass"
 group :development do
   gem 'web-console', '>= 3.3.0'
   gem 'rails_real_favicon'
-  gem "mini_racer"
-  gem "byebug"
 end
 
 group :development, :test do

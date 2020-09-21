@@ -10,9 +10,10 @@
 
 @media only screen and (max-width: 600px) {
   .banner {
+      display: flex;
       padding: 20px 0;
     }
-  }
+}
   
 .circle-card {
   max-width: 300px;

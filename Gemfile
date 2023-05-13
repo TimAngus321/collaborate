@@ -1,13 +1,13 @@
 source 'https://rubygems.org'
-ruby '2.6.5'
+ruby '3.1.2'
 
 gem 'bootsnap', require: false
 gem 'devise'
 gem 'jbuilder', '~> 2.0'
-gem 'pg', '~> 0.21'
+gem 'pg'
 gem 'puma'
 gem 'rack', '>= 2.0.8'
-gem 'rails', '5.2.3'
+gem 'rails', '7.0.4.3'
 gem 'redis'
 gem 'sprockets', '< 4.0.0'
 
@@ -18,10 +18,12 @@ gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
 gem 'cloudinary', '~> 1.9.1'
-gem 'carrierwave', '~> 1.3'
+gem 'carrierwave', '~> 1.2'
 gem 'pg_search'
 gem 'faker'
 gem "bootstrap-sass"
+gem 'psych', '< 4'
+gem "ransack", github: "activerecord-hackery/ransack"
 
 group :development do
   gem 'web-console', '>= 3.3.0'

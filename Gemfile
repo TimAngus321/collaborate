@@ -24,6 +24,7 @@ gem 'faker'
 gem "bootstrap-sass"
 gem 'psych', '< 4'
 gem "ransack", github: "activerecord-hackery/ransack"
+gem "bootstrap"
 
 group :development do
   gem 'web-console', '>= 3.3.0'

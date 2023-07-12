@@ -8,7 +8,6 @@ gem 'pg'
 gem 'puma'
 gem 'rack', '>= 2.0.8'
 gem 'rails', '7.0.4.3'
-gem 'redis'
 gem 'sprockets', '< 4.0.0'
 
 gem 'autoprefixer-rails'
@@ -20,11 +19,12 @@ gem 'webpacker'
 gem 'cloudinary', '~> 1.9.1'
 gem 'carrierwave', '~> 1.2'
 gem 'pg_search'
-gem 'faker'
+gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'main'
 gem "bootstrap-sass"
 gem 'psych', '< 4'
 gem "ransack", github: "activerecord-hackery/ransack"
 gem "bootstrap"
+gem 'cgi'
 
 group :development do
   gem 'web-console', '>= 3.3.0'

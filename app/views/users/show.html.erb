@@ -7,7 +7,7 @@
     <% if @user.photo == nil %>
     <img src="https://s1.dmcdn.net/OKX3b/x1080-bAE.jpg" alt="Bear-cave">
     <% else %>
-    <%= cl_image_tag @user.photo, height: 300, width: 400, crop: :fill %>
+    <%= cl_image_tag "https://res.cloudinary.com/beartechnologies/#{@user['photo']}", height: 300, width: 400, crop: :fill %>
     <% end %>
   <h2>Bio </h2><p><%= @user.biography %></p>
     <h2>Instrument skills </h2><p><% @user.instruments.each do |instrument| %>

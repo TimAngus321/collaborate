@@ -301,9 +301,9 @@ DEPENDENCIES
   bootsnap
   bootstrap
   bootstrap-sass
-  carrierwave (~> 1.2)
+  carrierwave
   cgi
-  cloudinary (~> 1.9.1)
+  cloudinary
   devise
   dotenv-rails
   faker!

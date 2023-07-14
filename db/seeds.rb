@@ -507,7 +507,7 @@ users = nicknames.map do |nickname|
 end
 
 20.times do
-  Message.create! user: users.sample, channel: channels.sample, content: Faker::HowIMetYourMother.quote
+  Message.create! user: users.sample, channel: channels.sample, content: Faker::Music::RockBand.name
 end
 
 puts 'Channels:'

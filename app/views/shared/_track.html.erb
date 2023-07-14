@@ -1,4 +1,5 @@
 
+ 
   <div class="track-card-header">
     <div>
       <h4>Title:</h4> <h3><%= track.name %></h1>
@@ -10,10 +11,16 @@
 <div class="track-card-hull">
 
   <div class="track-card-wav">
-    <div id="track_<%= track.id %>" class="<%= "waveform" if track.file %>" data-track-url='<%= track.file.url(secure: true) %>' data-request-id='<%= track.requests.first.id %>' data-region-start='<%= track.requests.first&.region_start %>' data-region-end='<%= track.requests.first&.region_end %>'></div>
+    <div 
+    id="track_<%= track.id %>" 
+    class="<%= "waveform" if track.file %>" 
+    data-track-url='<%= "https://res.cloudinary.com/beartechnologies/#{track['file']} "%>'
+    data-request-id='<%= track.requests.first.id %>' 
+    data-region-start='<%= track.requests.first&.region_start %>' 
+    data-region-end='<%= track.requests.first&.region_end %>'>
+    </div>
     <div id="wave_timeline_track_<%= track.id %>"></div>
   </div>
-
 
   <div class="track-wav-details">
     <p>bpm: <%= track.bpm %></p>

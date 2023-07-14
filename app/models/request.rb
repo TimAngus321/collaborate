@@ -1,5 +1,5 @@
 class Request < ApplicationRecord
-  include PgSearch
+  include PgSearch::Model
 
   belongs_to :instrument
   belongs_to :track

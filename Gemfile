@@ -25,7 +25,6 @@ gem 'psych', '< 4'
 gem "ransack", github: "activerecord-hackery/ransack"
 gem "bootstrap"
 gem 'cgi'
-gem 'aws-sdk'
 gem 'nokogiri', '~> 1.15', '>= 1.15.3'
 
 group :development do

@@ -7,14 +7,6 @@ GIT
       activesupport (>= 6.1.5)
       i18n
 
-GIT
-  remote: https://github.com/faker-ruby/faker.git
-  revision: 56fc3c844d29dfa2e8175ba79168c498a8672b5a
-  branch: main
-  specs:
-    faker (3.2.0)
-      i18n (>= 1.8.11, < 2)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -1539,6 +1531,8 @@ GEM
       railties (>= 3.2)
     erubi (1.12.0)
     execjs (2.8.1)
+    faker (3.2.0)
+      i18n (>= 1.8.11, < 2)
     ffi (1.15.5)
     font-awesome-sass (5.6.1)
       sassc (>= 1.11)
@@ -1729,7 +1723,7 @@ DEPENDENCIES
   cloudinary
   devise
   dotenv-rails
-  faker!
+  faker
   font-awesome-sass (~> 5.6.1)
   jbuilder (~> 2.0)
   listen (~> 3.0.5)

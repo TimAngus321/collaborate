@@ -19,7 +19,7 @@ gem 'webpacker'
 gem 'carrierwave'
 gem 'cloudinary'
 gem 'pg_search'
-gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'main'
+gem 'faker'
 gem "bootstrap-sass"
 gem 'psych', '< 4'
 gem "ransack", github: "activerecord-hackery/ransack"

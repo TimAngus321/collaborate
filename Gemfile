@@ -20,12 +20,13 @@ gem 'carrierwave'
 gem 'cloudinary'
 gem 'pg_search'
 gem 'faker'
-gem "bootstrap-sass"
+gem 'bootstrap-sass', '~> 3.3.7' 
+gem 'sass-rails', '>= 3.2'
 gem 'psych', '< 4'
 gem "ransack", github: "activerecord-hackery/ransack"
-gem "bootstrap"
 gem 'cgi'
 gem 'nokogiri', '~> 1.15', '>= 1.15.3'
+gem 'jquery-rails'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
@@ -40,3 +41,7 @@ group :development, :test do
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'dotenv-rails'
 end
+
+gem "cssbundling-rails", "~> 1.2"
+
+gem "jsbundling-rails", "~> 1.1"

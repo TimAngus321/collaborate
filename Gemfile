@@ -26,6 +26,7 @@ gem "ransack", github: "activerecord-hackery/ransack"
 gem "bootstrap"
 gem 'cgi'
 gem 'aws-sdk'
+gem 'nokogiri'
 
 group :development do
   gem 'web-console', '>= 3.3.0'

@@ -79,7 +79,8 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  <<: *default
-  database: collaborate_production
-  username: collaborate
-  password: <%= ENV['COLLABORATE_DATABASE_PASSWORD'] %>
+url: <%= ENV['DATABASE_URL'] %>
+  # <<: *default
+  # database: collaborate_production
+  # username: collaborate
+  # password: <%= ENV['COLLABORATE_DATABASE_PASSWORD'] %>

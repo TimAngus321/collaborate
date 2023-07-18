@@ -75,12 +75,11 @@ test:
 #
 # You can use this database configuration with:
 #
-#   production:
-#     url: <%= ENV['DATABASE_URL'] %>
+  production:
+    url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-url: <%= ENV['DATABASE_URL'] %>
-  # <<: *default
-  # database: collaborate_production
-  # username: collaborate
-  # password: <%= ENV['COLLABORATE_DATABASE_PASSWORD'] %>
+  <<: *default
+  database: collaborate_production
+  username: collaborate
+  password: <%= ENV['COLLABORATE_DATABASE_PASSWORD'] %>

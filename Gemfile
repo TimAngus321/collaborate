@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '3.1.2'
+ruby '3.0.6'
 
 gem 'bootsnap', require: false
 gem 'devise'

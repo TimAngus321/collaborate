@@ -4,7 +4,7 @@
   "dependencies": {
     "@babel/core": "^7.7.2",
     "@babel/preset-react": "^7.7.0",
-    "@rails/webpacker": "^4.0.2",
+    "@rails/webpacker": "^5.4.4",
     "acorn": "^6.4.1",
     "add": "^2.0.6",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.24",

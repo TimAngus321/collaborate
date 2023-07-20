@@ -42,6 +42,3 @@ group :development, :test do
   gem 'dotenv-rails'
 end
 
-gem "cssbundling-rails", "~> 1.2"
-
-gem "jsbundling-rails", "~> 1.1"

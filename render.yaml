@@ -7,12 +7,12 @@ services:
   - type: web
     name: old-collaborate-v1
     runtime: ruby
-    buildCommand: "./render-build.sh"
+    buildCommand: "./bin/render-build.sh"
     startCommand: "bundle exec puma -C config/puma.rb"
     envVars:
-      - key: DATABASE_URL
+      - key: RAILS_MASTER_KEY
         fromDatabase:
           name: old_collaborate_db_prod
           property: connectionString
-      - key: RAILS_MASTER_KEY
+      - key: DATABASE_URL
         sync: false

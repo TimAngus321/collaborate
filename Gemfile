@@ -27,6 +27,7 @@ gem "ransack", github: "activerecord-hackery/ransack"
 gem 'cgi'
 gem 'nokogiri', '~> 1.15', '>= 1.15.3'
 gem 'jquery-rails'
+gem 'turbolinks'
 
 group :development do
   gem 'web-console', '>= 3.3.0'

@@ -2,7 +2,6 @@ import WaveSurfer from 'wavesurfer.js';
 import CursorPlugin from "wavesurfer.js/dist/plugin/wavesurfer.cursor.js";
 import CursorTimeline from "wavesurfer.js/dist/plugin/wavesurfer.timeline.js";
 import CursorRegions from "wavesurfer.js/dist/plugin/wavesurfer.regions.js";
-import "turbolinks";
 import "bootstrap";
 
 $(document).ready(function() {

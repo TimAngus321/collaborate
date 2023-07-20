@@ -1,6 +1,6 @@
 databases:
   - name: old_collaborate_db_prod
-    databaseName: old_collaborate_db_prod_s935
+    databaseName: old_collaborate_db_prod
     user: collaborate
 
 services:

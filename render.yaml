@@ -1,18 +1,18 @@
 databases:
   - name: old-collaborate-db-prod
-    databaseName: old_collaborate_db_s935
+    databaseName: old_collaborate_db_prod
     user: collaborate
 
 services:
   - type: web
-    name: old-collaborate-v1
+    name: old-Collaborate-V1
     runtime: ruby
-    buildCommand: "./bin/render-build.sh"
+    buildCommand: "./render-build.sh"
     startCommand: "bundle exec puma -C config/puma.rb"
     envVars:
-      - key: <%= DATABASE_URL %>
+      - key: DATABASE_URL
         fromDatabase:
           name: old-collaborate-db-prod
           property: connectionString
-      - key: <%= ENV['RAILS_MASTER_KEY'] %>
+      - key: RAILS_MASTER_KEY
         sync: false

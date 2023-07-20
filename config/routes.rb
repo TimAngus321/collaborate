@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users, controllers: { registrations: "registrations" }
+  get 'render/index'
 
   root to: 'pages#home'
   get '/wikihow', to: 'pages#wikihow'

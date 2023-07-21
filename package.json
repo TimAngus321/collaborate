@@ -3,29 +3,31 @@
   "private": true,
   "dependencies": {
     "@babel/core": "^7.22.9",
+    "@babel/preset-env": "^7.22.9",
     "@rails/webpacker": "5.4.4",
     "acorn": "^8.10.0",
-    "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
+    "babel-preset-env": "^1.7.0",
     "bootstrap": "^5.3.0",
     "choices.js": "^10.2.0",
     "chokidar": "^3.5.3",
     "core-js": "^3.31.1",
     "fsevents": "^2.3.2",
     "history": "^5.3.0",
+    "html-webpack-plugin": "^5.5.3",
     "jquery": "^3.7.0",
     "kind-of": "^6.0.3",
     "malihu-custom-scrollbar-plugin": "^3.1.5",
+    "path": "^0.12.7",
     "popper.js": "^1.16.1",
-    "prop-types": "^15.8.1",
     "sass": "^1.64.0",
     "serialize-javascript": "^6.0.1",
     "wavesurfer.js": "^7.0.3",
-    "webpack": "^4.46.0",
-    "webpack-cli": "^3.3.12"
+    "webpack": "^5.88.2"
   },
   "devDependencies": {
-    "webpack-dev-server": "^3",
-    "@babel/preset-env": "^7.8.0"
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^3"
   },
   "version": "1",
   "description": "Music Matchmaker and Versioning Tool",

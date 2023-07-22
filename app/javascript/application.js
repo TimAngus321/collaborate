@@ -1,11 +1,18 @@
+// Configure your import map in config/importmap.rb. Read more: https://github.com/rails/importmap-rails
 // Entry point for the build script in your package.json
 import "./controllers"
+import "controllers"
 import "./channels"
-import "bootstrap";
-import WaveSurfer from 'wavesurfer.js';
-import CursorPlugin from "wavesurfer.js/dist/plugin/wavesurfer.cursor.js";
-import CursorTimeline from "wavesurfer.js/dist/plugin/wavesurfer.timeline.js";
-import CursorRegions from "wavesurfer.js/dist/plugin/wavesurfer.regions.js";
+import "popper"
+import "bootstrap"
+import "WaveSurfer"
+import "CursorPlugin"
+import "CursorTimeline"
+import "CursorRegions"
+// import WaveSurfer from 'wavesurfer.js';
+// import CursorPlugin from "wavesurfer.js/dist/plugin/wavesurfer.cursor.js";
+// import CursorTimeline from "wavesurfer.js/dist/plugin/wavesurfer.timeline.js";
+// import CursorRegions from "wavesurfer.js/dist/plugin/wavesurfer.regions.js";
 
 
 $(document).ready(function() {
@@ -101,9 +108,3 @@ $(document).ready(function() {
   });
 });
 
-
-
-
-
-
-import "controllers"

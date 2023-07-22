@@ -15,6 +15,8 @@ gem 'importmap-rails'
 gem 'turbo-rails'
 gem "sprockets-rails"
 gem 'dotenv-rails'
+gem 'redis'
+gem 'hiredis'
 
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 5.6.1'
@@ -46,6 +48,3 @@ group :development, :test do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
-
-# Use Redis for Action Cable
-gem "redis", "~> 4.0"

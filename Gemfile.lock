@@ -125,6 +125,7 @@ GEM
       sassc (>= 1.11)
     globalid (1.1.0)
       activesupport (>= 5.0)
+    hiredis (0.6.3)
     http-accept (1.7.0)
     http-cookie (1.0.5)
       domain_name (~> 0.5)
@@ -323,6 +324,7 @@ DEPENDENCIES
   dotenv-rails
   faker
   font-awesome-sass (~> 5.6.1)
+  hiredis
   importmap-rails
   jbuilder (~> 2.0)
   jquery-rails
@@ -339,7 +341,7 @@ DEPENDENCIES
   rails (= 7.0.4.3)
   rails_real_favicon
   ransack!
-  redis (~> 4.0)
+  redis
   sass-rails (>= 3.2)
   sassc-rails
   simple_form

@@ -13,3 +13,5 @@ Rails.application.config.session_store :redis_store,
                                        secure: secure,
                                        same_site: :lax,
                                        httponly: true
+
+Rails.application.config.session_store :cookie_store, key: '_myapp_session'

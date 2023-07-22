@@ -3,6 +3,11 @@
 //
 //= require action_cable
 //= require_self
+//= require jquery
+//= require jquery_ujs
+//= require bootstrap
+//= require bootstrap-sprockets
+//= require_tree .
 //= require_tree ./channels
 
 (function() {

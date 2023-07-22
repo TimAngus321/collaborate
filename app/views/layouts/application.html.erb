@@ -9,7 +9,7 @@
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
-    <%= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
+    <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
         <title><%= meta_title %></title>
     <meta name="description" content="<%= meta_description %>">
 
@@ -28,6 +28,9 @@
     <meta name="twitter:description" content="<%= meta_description %>">
     <meta name="twitter:creator" content="<%= DEFAULT_META["twitter_account"] %>">
     <meta name="twitter:image:src" content="<%= meta_image %>">
+  <!-- This is the new webpacker for rails 7 => jsbundling-rails -->
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+    <%#= javascript_importmap_tags %> 
   </head>
   <body>
     <% unless action_name == "home" %>
@@ -38,7 +41,7 @@
       <%= yield %>
     </div>
     <%= javascript_include_tag 'application' %>
-    <%= javascript_pack_tag 'application' %>
+    <%#= javascript_pack_tag 'application' %> <!-- This is the old webpacker way now using jsbundling-rails -->
     <%= yield :after_js %>
     <%= render 'shared/footer' %>
   </body>

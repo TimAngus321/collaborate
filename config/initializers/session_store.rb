@@ -5,6 +5,7 @@ key = Rails.env.production? ? "_app_session" : "_app_session_#{Rails.env}"
 domain = ENV.fetch("DOMAIN_NAME", "localhost")
 
 Rails.application.config.session_store :redis_store,
+                                       :cookie_store
                                        url: session_url,
                                        expire_after: 180.days,
                                        key: key,

@@ -1,3 +1,6 @@
+// Entry point for the build script in your package.json
+import "./controllers"
+import "./channels"
 import "bootstrap";
 import WaveSurfer from 'wavesurfer.js';
 import CursorPlugin from "wavesurfer.js/dist/plugin/wavesurfer.cursor.js";
@@ -103,3 +106,4 @@ $(document).ready(function() {
 
 
 
+import "controllers"

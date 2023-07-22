@@ -1,4 +1,4 @@
-Configurations
+# Configurations
 session_url = "#{ENV.fetch('REDIS_URL', 'redis://127.0.0.1:6379')}/0/session"
 secure = Rails.env.production?
 key = Rails.env.production? ? "_app_session" : "_app_session_#{Rails.env}"

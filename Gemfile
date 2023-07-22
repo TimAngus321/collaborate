@@ -14,6 +14,7 @@ gem 'stimulus-rails'
 gem 'importmap-rails'
 gem 'turbo-rails'
 gem "sprockets-rails"
+gem 'dotenv-rails'
 
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 5.6.1'

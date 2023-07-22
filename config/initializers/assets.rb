@@ -14,4 +14,4 @@ Rails.application.config.assets.version = "1.0"
 # Rails.application.config.assets.precompile += %w( admin.js admin.css )
 
 # Rails advised updating to below - doesn't work
-# Rails.application.config.assets.precompile += %w( controllers/index.js )
+Rails.application.config.assets.precompile += %w(application.scss bootstrap.min.js popper.js controllers/hello_controller.js controllers/index.js)

@@ -89,7 +89,7 @@ GEM
       sassc (>= 2.0.0)
     builder (3.2.4)
     byebug (11.1.3)
-    carrierwave (3.0.0)
+    carrierwave (3.0.1)
       activemodel (>= 6.0.0)
       activesupport (>= 6.0.0)
       addressable (~> 2.6)
@@ -289,7 +289,7 @@ GEM
       activemodel (>= 6.0.0)
       bindex (>= 0.4.0)
       railties (>= 6.0.0)
-    webpacker (5.4.4)
+    webpacker (5.4.3)
       activesupport (>= 5.2)
       rack-proxy (>= 0.6.1)
       railties (>= 5.2)
@@ -336,7 +336,7 @@ DEPENDENCIES
   sprockets (< 4.0.0)
   uglifier
   web-console (>= 3.3.0)
-  webpacker
+  webpacker (= 5.4.3)
 
 RUBY VERSION
    ruby 3.1.2p20

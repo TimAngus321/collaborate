@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   devise_for :users, controllers: { registrations: "registrations" }
-  get 'render/index'
 
   root to: 'pages#home'
   get '/wikihow', to: 'pages#wikihow'
@@ -9,8 +8,6 @@ Rails.application.routes.draw do
 
 resources :channels, only: [ :show ]
 get "channel/show", to: 'channels#show'
-
-
 
   resources :users, only: [:edit, :update, :show, :index]
 

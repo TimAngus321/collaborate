@@ -5,10 +5,10 @@ databases:
 
 services:
 - type: redis
-   name: collabRedis
-   ipAllowList: [] # only allow internal connections
-   plan: free # optional (defaults to starter)
-   maxmemoryPolicy: allkeys-lfu # optional (defaults to allkeys-lru). Rails recommends allkeys-lfu as a default.
+  name: collabRedis
+  ipAllowList: [] # only allow internal connections
+  plan: free # optional (defaults to starter)
+  maxmemoryPolicy: allkeys-lfu # optional (defaults to allkeys-lru). Rails recommends allkeys-lfu as a default.
   - type: web
     name: old_collaborate_v1
     runtime: ruby

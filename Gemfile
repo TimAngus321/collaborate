@@ -16,7 +16,7 @@ gem 'rails', '~> 7.2.0'
 # gem 'importmap-rails'
 # gem 'turbo-rails'
 # gem 'stimulus-rails'  # Removed - not needed for API
-gem 'dotenv-rails'
+# gem 'dotenv-rails'  # Not needed for production - Render provides env vars directly
 # gem 'redis'  # Removed - not needed for basic API
 # gem 'hiredis'  # Removed - not needed for basic API
 # gem "redis-actionpack"  # Removed - not needed for basic API

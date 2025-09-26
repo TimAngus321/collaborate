@@ -117,10 +117,6 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
-    dotenv (3.1.8)
-    dotenv-rails (3.1.8)
-      dotenv (= 3.1.8)
-      railties (>= 6.1)
     drb (2.2.3)
     erubi (1.13.1)
     faker (3.5.2)
@@ -348,7 +344,6 @@ DEPENDENCIES
   cloudinary
   csv
   devise
-  dotenv-rails
   faker
   jbuilder (~> 2.0)
   listen (~> 3.0.5)

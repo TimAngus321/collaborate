@@ -7,6 +7,6 @@ echo "Installing gems..."
 bundle install
 
 echo "Running database migrations..."
-bin/rails db:migrate
+bundle exec rails db:migrate
 
 echo "Build complete!"

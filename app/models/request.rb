@@ -8,7 +8,7 @@ class Request < ApplicationRecord
   has_many :submissions, dependent: :destroy
   validates :description, presence: true
 
-  default_scope { order(created_at: :desc) }
+  # Standard ordering - most recent first
 
   pg_search_scope :search_by_instrument_and_genre,
                   associated_against: {

@@ -24,4 +24,15 @@ get "channel/show", to: 'channels#show'
   patch '/submissions/:id/accept', to: "submissions#accept", as: :accept_submission
 
   mount ActionCable.server => '/cable'
+  
+  # API routes
+  namespace :api do
+    namespace :v1 do
+      resources :requests, only: [:index, :show] do
+        member do
+          get :submissions
+        end
+      end
+    end
+  end
 end

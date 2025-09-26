@@ -1,10 +1,11 @@
 source 'https://rubygems.org'
-ruby '3.1.2'
+ruby '3.3.3'
 
 gem 'bootsnap', require: false
 gem 'devise'
 gem 'jbuilder', '~> 2.0'
 gem 'pg'
+gem 'sqlite3', '~> 1.4' # For development
 gem 'puma'
 gem 'rack', '>= 2.0.8'
 gem 'rails', '7.0.4.3'
@@ -35,6 +36,7 @@ gem "ransack", github: "activerecord-hackery/ransack"
 gem 'cgi'
 gem 'nokogiri', '~> 1.15', '>= 1.15.3'
 gem 'jquery-rails'
+gem 'rack-cors'
 
 group :development do
   gem 'web-console', '>= 3.3.0'

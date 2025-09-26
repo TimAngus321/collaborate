@@ -14,7 +14,7 @@ services:
       - key: DATABASE_URL
         fromDatabase:
           name: collaborate-api-db
-          property: connectionString
+          property: internalConnectionString
       - key: RAILS_ENV
         value: production
       - key: RAILS_MASTER_KEY
@@ -22,7 +22,7 @@ services:
       - key: DISABLE_DATABASE_ENVIRONMENT_CHECK
         value: "1"
       - key: PGSSLMODE
-        value: disable
+        value: prefer
       - key: DATABASE_POOL
         value: "5"
       - key: PGCONNECT_TIMEOUT

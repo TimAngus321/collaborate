@@ -1,7 +1,7 @@
 # Ensure SSL is properly configured for Render PostgreSQL
 if Rails.env.production? && ENV['DATABASE_URL']
   # Set SSL environment variables if not already set
-  ENV['PGSSLMODE'] ||= 'require'
+  ENV['PGSSLMODE'] ||= 'verify-full'
   ENV['PGSSLROOTCERT'] ||= 'system'
   
   Rails.logger.info "Database SSL configuration:"

@@ -9,7 +9,7 @@ gem 'sqlite3', '~> 1.4' # For development
 gem 'puma'
 gem 'rack', '>= 2.0.8'
 gem 'rails', '~> 7.2.0'
-gem 'sprockets', '~> 4.0'
+# gem 'sprockets', '~> 4.0'  # Not needed for API mode
 # Frontend gems - not needed for API mode
 # gem 'jsbundling-rails'
 # gem 'stimulus-rails' 

@@ -86,6 +86,7 @@ production:
   username: collaborate
   password: <%= ENV['COLLABORATE_DATABASE_PASSWORD'] %>
   # SSL configuration for Render PostgreSQL
-  sslmode: require
+  sslmode: prefer
   pool: 5
   timeout: 5000
+  connect_timeout: 10

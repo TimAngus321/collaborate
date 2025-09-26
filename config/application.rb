@@ -1,19 +1,7 @@
 require_relative "boot"
 
-# Require only the Rails components we need for API mode
-require "rails"
-# Pick the frameworks you want:
-require "active_model/railtie"
-require "active_job/railtie"
-require "active_record/railtie"
-require "active_storage/engine"
-require "action_controller/railtie"
-require "action_mailer/railtie"
-require "action_mailbox/engine"
-require "action_text/engine"
-require "action_view/railtie"
-require "action_cable/engine"
-# require "rails/test_unit/railtie"
+# Minimal Rails API setup - only load what we absolutely need
+require "rails/all"
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -26,6 +14,10 @@ module Collaborate
 
     # Configuration for API mode
     config.api_only = true
+    
+    # Explicitly disable asset pipeline
+    config.generators.assets = false
+    config.generators.helper = false
     
     # Configure CORS middleware
     config.middleware.insert_before 0, Rack::Cors do

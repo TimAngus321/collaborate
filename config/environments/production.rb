@@ -3,6 +3,11 @@ require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
+  
+  # Explicitly disable assets for API-only mode
+  if Rails.application.config.respond_to?(:assets)
+    config.assets.enabled = false
+  end
 
   # Code is not reloaded between requests.
   config.cache_classes = true

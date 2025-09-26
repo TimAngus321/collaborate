@@ -42,6 +42,7 @@ gem 'rack-cors'
 gem 'base64'
 gem 'bigdecimal'
 gem 'mutex_m'
+gem 'logger'
 
 group :development do
   gem 'web-console', '>= 3.3.0'

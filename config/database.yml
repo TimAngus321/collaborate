@@ -77,9 +77,5 @@ test:
 #
 production:
   <<: *default
-  url: <%= ENV['DATABASE_URL'] %>
-  # Database config comes from DATABASE_URL, SSL is required by Render
-  sslmode: require
-  pool: 5
-  timeout: 5000
-  connect_timeout: 10
+  # Parse DATABASE_URL and ensure SSL parameters are included
+  url: <%= ENV['DATABASE_URL']&.include?('sslmode') ? ENV['DATABASE_URL'] : "#{ENV['DATABASE_URL']}?sslmode=require" %>

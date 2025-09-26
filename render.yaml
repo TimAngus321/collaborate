@@ -2,13 +2,9 @@ databases:
   - name: collaborate-api-db
     databaseName: collaborate_api_production
     user: collaborate
+    plan: free
 
 services:
-  - type: redis
-    name: collabRedis
-    ipAllowList: [] # only allow internal connections
-    plan: free # optional (defaults to starter)
-    maxmemoryPolicy: allkeys-lfu # optional (defaults to allkeys-lru). Rails recommends allkeys-lfu as a default.
   - type: web
     name: collaborate-api
     runtime: ruby
@@ -23,8 +19,5 @@ services:
         value: production
       - key: RAILS_MASTER_KEY
         sync: false
-      - key: COLLAB_REDIS_URL # this must match the name of the environment variable used in production.rb
-        fromService:
-          type: redis
-          name: collabRedis
-          property: connectionString
+      - key: DISABLE_DATABASE_ENVIRONMENT_CHECK
+        value: "1"

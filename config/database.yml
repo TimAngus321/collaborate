@@ -75,17 +75,10 @@ test:
 #
 # You can use this database configuration with:
 #
-  production:
-    <<: *default
-    url: <%= ENV['DATABASE_URL'] %>
-#
 production:
   <<: *default
   url: <%= ENV['DATABASE_URL'] %>
-  database: collaborate_api_production
-  username: collaborate
-  password: <%= ENV['COLLABORATE_DATABASE_PASSWORD'] %>
-  # Temporarily disable SSL to get deployment working
+  # Database config comes from DATABASE_URL, but add SSL override
   sslmode: disable
   pool: 5
   timeout: 5000

@@ -1,5 +1,5 @@
 # Use the official Ruby image with the correct version
-FROM ruby:3.1.0
+FROM ruby:3.1.2
 
 # Install dependencies
 RUN apt-get update -qq && apt-get install -y \

@@ -21,3 +21,9 @@ services:
         sync: false
       - key: DISABLE_DATABASE_ENVIRONMENT_CHECK
         value: "1"
+      - key: RAILS_MAX_THREADS
+        value: "5"
+      - key: DB_POOL
+        value: "5"
+      - key: PGSSLMODE
+        value: require

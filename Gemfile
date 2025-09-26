@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '3.1.2'
+ruby '3.3.3'
 
 gem 'bootsnap', require: false
 gem 'devise'
@@ -8,7 +8,7 @@ gem 'pg'
 gem 'sqlite3', '~> 1.4' # For development
 gem 'puma'
 gem 'rack', '>= 2.0.8'
-gem 'rails', '~> 7.0.8'
+gem 'rails', '~> 7.2.0'
 gem 'sprockets', '~> 4.0'
 gem 'jsbundling-rails'
 gem 'stimulus-rails'
@@ -38,7 +38,13 @@ gem 'nokogiri', '~> 1.15', '>= 1.15.3'
 gem 'jquery-rails'
 gem 'rack-cors'
 
-# Remove Ruby 3.4+ compatibility gems - not needed for Ruby 3.1.0
+# Ruby 3.4+ required gems
+gem 'base64'
+gem 'bigdecimal'
+gem 'mutex_m'
+gem 'logger'
+gem 'ostruct'
+gem 'csv'
 
 group :development do
   gem 'web-console', '>= 3.3.0'

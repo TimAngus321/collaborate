@@ -77,5 +77,5 @@ test:
 #
 production:
   <<: *default
-  # Parse DATABASE_URL and ensure SSL parameters are included
-  url: <%= ENV['DATABASE_URL']&.include?('sslmode') ? ENV['DATABASE_URL'] : "#{ENV['DATABASE_URL']}?sslmode=verify-full" %>
+  # Parse DATABASE_URL and ensure SSL parameters are included  
+  url: <%= ENV['DATABASE_URL']&.include?('sslmode') ? ENV['DATABASE_URL'] : "#{ENV['DATABASE_URL']}?sslmode=require" %>

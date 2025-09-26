@@ -82,6 +82,10 @@ test:
 production:
   <<: *default
   url: <%= ENV['DATABASE_URL'] %>
-  database: old_collaborate_db_prod
+  database: collaborate_api_production
   username: collaborate
   password: <%= ENV['COLLABORATE_DATABASE_PASSWORD'] %>
+  # SSL configuration for Render PostgreSQL
+  sslmode: require
+  pool: 5
+  timeout: 5000

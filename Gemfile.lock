@@ -98,7 +98,7 @@ GEM
       image_processing (~> 1.1)
       marcel (~> 1.0.0)
       ssrf_filter (~> 1.0)
-    cgi (0.3.6)
+    cgi (0.3.7)
     cloudinary (1.26.0)
       aws_cf_signer
       rest-client (>= 2.0.0)

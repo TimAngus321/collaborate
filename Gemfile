@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
-ruby '3.0.6'
+ruby '3.1.0'
 
-# gem 'bootsnap', require: false  # Disabled to fix Logger loading issues
+gem 'bootsnap', require: false
 gem 'devise'
 gem 'jbuilder', '~> 2.0'
 gem 'pg'

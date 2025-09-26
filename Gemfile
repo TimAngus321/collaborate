@@ -8,7 +8,7 @@ gem 'pg'
 gem 'sqlite3', '~> 1.4' # For development
 gem 'puma'
 gem 'rack', '>= 2.0.8'
-gem 'rails', '7.0.4.3'
+gem 'rails', '~> 7.0.8'
 gem 'sprockets', '~> 4.0'
 gem 'jsbundling-rails'
 gem 'stimulus-rails'

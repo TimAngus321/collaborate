@@ -1,0 +1,11 @@
+[build]
+builder = "heroku/buildpacks:20"
+
+[deploy]
+startCommand = "bundle exec rails server -b 0.0.0.0 -p $PORT"
+healthcheckPath = "/api/v1/requests"
+healthcheckTimeout = 100
+restartPolicyType = "on_failure"
+
+[env]
+RAILS_ENV = "production"

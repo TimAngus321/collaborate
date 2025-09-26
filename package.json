@@ -1,5 +1,9 @@
 {
-"scripts": {
+  "name": "collaborate-api",
+  "version": "1.0.0",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "echo 1",
     "build:css": "echo 1"

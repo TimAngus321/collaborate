@@ -1,11 +1,12 @@
 #!/usr/bin/env bash
-# exit on error
+
+# Exit on error
 set -o errexit
 
 echo "Installing gems..."
 bundle install
 
 echo "Running database migrations..."
-bundle exec rake db:migrate
+bin/rails db:migrate
 
 echo "Build complete!"

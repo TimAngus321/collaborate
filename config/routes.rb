@@ -25,6 +25,9 @@ get "channel/show", to: 'channels#show'
 
   mount ActionCable.server => '/cable'
   
+  # Health check endpoint for Render deployment
+  get '/health', to: proc { [200, {}, ['OK']] }
+  
   # API routes
   namespace :api do
     namespace :v1 do

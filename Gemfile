@@ -38,6 +38,11 @@ gem 'nokogiri', '~> 1.15', '>= 1.15.3'
 gem 'jquery-rails'
 gem 'rack-cors'
 
+# Ruby 3.4+ compatibility gems
+gem 'base64'
+gem 'bigdecimal'
+gem 'mutex_m'
+
 group :development do
   gem 'web-console', '>= 3.3.0'
   gem 'rails_real_favicon'

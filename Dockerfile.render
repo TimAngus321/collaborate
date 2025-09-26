@@ -1,0 +1,29 @@
+# Use Ruby 3.3.3
+FROM ruby:3.3.3
+
+# Install dependencies
+RUN apt-get update -qq && apt-get install -y \
+  nodejs \
+  postgresql-client \
+  && rm -rf /var/lib/apt/lists/*
+
+# Set working directory
+WORKDIR /app
+
+# Copy Gemfile and install gems
+COPY Gemfile Gemfile.lock ./
+RUN bundle install
+
+# Copy application
+COPY . .
+
+# Set Rails environment
+ENV RAILS_ENV=production
+ENV RAILS_SERVE_STATIC_FILES=true
+ENV RAILS_LOG_TO_STDOUT=true
+
+# Expose port
+EXPOSE $PORT
+
+# Start command
+CMD bundle exec rails server -b 0.0.0.0 -p $PORT

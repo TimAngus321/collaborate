@@ -17,12 +17,14 @@ services:
           property: connectionString
       - key: RAILS_ENV
         value: production
+      - key: PGSSLROOTCERT
+        value: system
       - key: RAILS_MASTER_KEY
         sync: false
       - key: DISABLE_DATABASE_ENVIRONMENT_CHECK
         value: "1"
       - key: PGSSLMODE
-        value: allow
+        value: require
       - key: DATABASE_POOL
         value: "5"
       - key: PGCONNECT_TIMEOUT

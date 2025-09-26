@@ -79,7 +79,7 @@ production:
   <<: *default
   url: <%= ENV['DATABASE_URL'] %>
   # Database config comes from DATABASE_URL, SSL is required by Render
-  sslmode: allow
+  sslmode: require
   pool: 5
   timeout: 5000
   connect_timeout: 10

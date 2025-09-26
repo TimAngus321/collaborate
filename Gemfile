@@ -34,7 +34,7 @@ gem 'sass-rails', '>= 3.2'
 gem 'psych', '< 4'
 gem "ransack", github: "activerecord-hackery/ransack"
 gem 'cgi'
-gem 'nokogiri', '~> 1.15', '>= 1.15.3'
+gem 'nokogiri', '~> 1.18'
 gem 'jquery-rails'
 gem 'rack-cors'
 

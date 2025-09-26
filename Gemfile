@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
-ruby '3.3.3'
+ruby '3.0.6'
 
-gem 'bootsnap', require: false
+# gem 'bootsnap', require: false  # Disabled to fix Logger loading issues
 gem 'devise'
 gem 'jbuilder', '~> 2.0'
 gem 'pg'
@@ -38,11 +38,7 @@ gem 'nokogiri', '~> 1.15', '>= 1.15.3'
 gem 'jquery-rails'
 gem 'rack-cors'
 
-# Ruby 3.4+ compatibility gems
-gem 'base64'
-gem 'bigdecimal'
-gem 'mutex_m'
-gem 'logger'
+# Remove Ruby 3.4+ compatibility gems - not needed for Ruby 3.1.0
 
 group :development do
   gem 'web-console', '>= 3.3.0'

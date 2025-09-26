@@ -10,8 +10,8 @@ if Rails.env.production?
       # Ensure SSL parameters are set
       if db_url.scheme == 'postgres' || db_url.scheme == 'postgresql'
         params = db_url.query ? "#{db_url.query}&" : ""
-        # Temporarily disable SSL to get deployment working
-        params += "sslmode=disable" unless params.include?('sslmode=')
+        # SSL is required by Render, use allow mode
+        params += "sslmode=allow" unless params.include?('sslmode=')
         params += "&connect_timeout=10" unless params.include?('connect_timeout=')
         params += "&statement_timeout=30000" unless params.include?('statement_timeout=')
         db_url.query = params

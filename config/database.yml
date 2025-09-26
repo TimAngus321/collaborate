@@ -78,8 +78,8 @@ test:
 production:
   <<: *default
   url: <%= ENV['DATABASE_URL'] %>
-  # Database config comes from DATABASE_URL, but add SSL override
-  sslmode: disable
+  # Database config comes from DATABASE_URL, SSL is required by Render
+  sslmode: allow
   pool: 5
   timeout: 5000
   connect_timeout: 10

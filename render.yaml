@@ -22,7 +22,7 @@ services:
       - key: DISABLE_DATABASE_ENVIRONMENT_CHECK
         value: "1"
       - key: PGSSLMODE
-        value: require
+        value: disable
       - key: DATABASE_POOL
         value: "5"
       - key: PGCONNECT_TIMEOUT
